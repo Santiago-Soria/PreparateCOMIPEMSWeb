@@ -212,5 +212,5 @@ body { display: flex;
     color: #666;
     background-color: #f5f5f8;
     padding: 10px 0; /* Espaciado interno */
-    border-top: 1px solid #ddd; /* Línea decorativa */
+    border-top: 1px solid #ddd; 
 }
