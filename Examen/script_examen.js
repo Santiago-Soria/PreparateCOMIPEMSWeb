@@ -4,6 +4,7 @@ let preguntaActual = 0;
 let respuestasUsuario = {};
 let tiempo = 3 * 60 * 60; // 3 horas en segundos
 
+
 // Cargar preguntas desde un archivo JSON local
 function cargarPreguntas(materia) {
     fetch("preguntas.json") // Ruta relativa al archivo JSON
@@ -20,19 +21,31 @@ function cargarPreguntas(materia) {
 
 // Mostrar la pregunta actual
 function mostrarPregunta() {
-    const contenedorPregunta = document.getElementById("pregunta-contenedor");
-    const opcionesDiv = document.getElementById("opciones-respuesta");
+    const pregunta = preguntas[materiaActual][indicePregunta];
+    const preguntaContenedor = document.getElementById("pregunta-contenedor");
+    const respuestaContenedor = document.getElementById("opciones-respuesta");
 
-    const pregunta = preguntas[materiaActual][preguntaActual];
-    contenedorPregunta.textContent = pregunta.pregunta;
+    // Mostrar texto de la pregunta con formato
+    preguntaContenedor.innerHTML = pregunta.pregunta.replace(/\n/g, "<br>");
 
-    opcionesDiv.innerHTML = pregunta.opciones.map((opcion, index) => `
-        <label>
-            <input type="radio" name="respuesta" value="${String.fromCharCode(65 + index)}" 
-            ${respuestasUsuario[materiaActual]?.[preguntaActual] === String.fromCharCode(65 + index) ? "checked" : ""}>
-            ${String.fromCharCode(65 + index)}) ${opcion}
-        </label><br>
-    `).join("");
+    // Mostrar imagen si existe
+    if (pregunta.imagen) {
+        const img = document.createElement("img");
+        img.src = pregunta.imagen;
+        img.alt = "Imagen de apoyo";
+        img.style.maxWidth = "100%";
+        preguntaContenedor.appendChild(img);
+    }
+
+    // Mostrar opciones
+    respuestaContenedor.innerHTML = pregunta.opciones
+    .map((opcion, i) => `<label><input type="radio" name="respuesta" value="${String.fromCharCode(65 + i)}"> ${opcion}</label><br>`)
+    .join("");
+
+// Mostrar/ocultar botón de anterior
+document.getElementById("btn-anterior").style.display = indicePregunta > 0 || Object.keys(preguntas).indexOf(materiaActual) > 0
+? "inline-block"
+: "none";
 }
 
 // Guardar la respuesta seleccionada por el usuario
@@ -65,21 +78,36 @@ function actualizarMenuLateral(preguntasMateria) {
 
 // Navegación entre preguntas
 document.getElementById("btn-siguiente").addEventListener("click", () => {
-    seleccionarRespuesta(); // Guardar la respuesta actual
-    if (preguntaActual < preguntas[materiaActual].length - 1) {
-        preguntaActual++;
-        mostrarPregunta();
+    indicePregunta++;
+    if (indicePregunta >= preguntas[materiaActual].length) {
+        // Cambiar a la siguiente materia
+        const materias = Object.keys(preguntas);
+        const index = materias.indexOf(materiaActual);
+        if (index + 1 < materias.length) {
+            materiaActual = materias[index + 1];
+            indicePregunta = 0;
+        } else {
+            alert("¡Has terminado el examen!");
+            return;
+        }
     }
+    mostrarPregunta();
 });
 
 document.getElementById("btn-anterior").addEventListener("click", () => {
-    seleccionarRespuesta(); // Guardar la respuesta actual
-    if (preguntaActual > 0) {
-        preguntaActual--;
-        mostrarPregunta();
+    if (indicePregunta > 0) {
+        indicePregunta--;
+    } else {
+        // Cambiar a la materia anterior
+        const materias = Object.keys(preguntas);
+        const index = materias.indexOf(materiaActual);
+        if (index > 0) {
+            materiaActual = materias[index - 1];
+            indicePregunta = preguntas[materiaActual].length - 1;
+        }
     }
+    mostrarPregunta();
 });
-
 // Manejo del cronómetro
 function iniciarCronometro() {
     const cronometro = document.getElementById("cronometro");
