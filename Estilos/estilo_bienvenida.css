@@ -1,0 +1,216 @@
+/* Reset básico de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Estilos del logo */
+.logo img {
+    width: 350px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Divisor vertical entre el logo y los botones */
+.divider {
+    width: 2px; /* Línea vertical */
+    height: 40px; /* Altura de la línea */
+    background-color: #004C84; /* Color de la línea */
+    margin: 0 20px; /* Espaciado horizontal alrededor del divisor */
+}
+
+/* Contenedor de los botones de navegación */
+.nav-buttons {
+    display: flex;
+    justify-content: space-around; /* Distribuye espacio de forma uniforme */
+    flex-grow: 1; /* Hace que los botones usen el espacio disponible en el header */
+}
+
+/* Estilos de los botones de navegación */
+.nav-button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #237BBB;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que los botones se dividan en varias líneas */
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.nav-button:hover {
+    color: #004C84;
+}
+
+/* Subrayado al pasar el mouse */
+.nav-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    border-radius: 11px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover::after {
+    background-color: #004C84;
+}
+
+.Texto-Bienvenida {
+    width: 1000px;
+    height: 248px;
+    margin: 30px auto 10px auto; /* Centra horizontalmente */
+    font-family: 'Nunito', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: normal;
+    text-align: center;
+    color: #000;
+}
+
+.container { flex: 1; }
+
+/* Contenedor flex para la imagen y el texto */
+.descripcion-con-imagen {
+    display: flex;
+    justify-content: space-between; /* Espacio entre la imagen y el texto */
+    margin: 0 66px 20px 66px; /* Márgenes laterales respecto al borde de la página */
+    align-items: stretch;
+}
+
+/* Estilos para la descripción de la plataforma */
+.descripcion-plataforma {
+    width: 672px; /* Ancho fijo del texto */
+    font-family: 'Nunito', sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1.4;
+    text-align: justify;
+    color: #000;
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilos para la imagen */
+.imagen-plataforma img {
+    width: 582px;
+    height: 508px;
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
+}
+
+.descripcion-plataforma_2 {
+    width: 100%; /* Ancho completo */
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+    text-align: center;
+    color: #000;
+    margin-top: 20px; /* Espacio encima del mensaje */
+}
+
+/* Estilo para el botón */
+.Rectangle1 {
+    width: 400.5px;
+    height: 51px;
+    margin: 25px auto; /* Centrado horizontalmente */
+    padding: 10px 22.3px 17.4px 18.1px;
+    border-radius: 11px;
+    background-color: #237bbb;
+    color: #fff; /* Color del texto */
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Para asegurar el centrado dentro del contenedor */
+}
+
+/* Efecto hover para el botón */
+.Rectangle1:hover {
+    background-color: #004C84; /* Cambia el color cuando se pasa el cursor */
+}
+
+.Rectangle-63-primary {
+    width: 400.5px;
+    height: 51px;
+    margin: 25px auto; /* Centrado horizontalmente */
+    padding: 10px 22.3px 17.4px 18.1px;
+    border-radius: 11px;
+    background-color: #237bbb;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.Rectangle-63-primary:hover {
+    background-color: #004C84;
+}
+
+/* Segundo botón con borde */
+.Rectangle2 {
+    width: 400.5px;
+    height: 51px;
+    margin: 25px auto 153px; /* Centrado horizontalmente y espacio inferior */
+    padding: 10px 22.3px 17.4px 18.1px;
+    border-radius: 11px;
+    border: solid 1.5px #237bbb;
+    background-color: #fff;
+    color: #237bbb; /* Texto en color azul */
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+}
+
+.Rectangle2:hover {
+    background-color: #237bbb;
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+}
+
+
+.footer {
+    width: 100%; /* Ocupa todo el ancho de la página */
+    text-align: center; /* Centra el texto */
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #f5f5f8;
+    padding: 10px 0; /* Espaciado interno */
+    border-top: 1px solid #ddd; /* Línea decorativa */
+}

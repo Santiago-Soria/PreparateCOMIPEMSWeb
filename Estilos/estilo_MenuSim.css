@@ -1,0 +1,88 @@
+/* Contenedor principal dividido */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+}
+
+/* Título de Exámenes Simulacro */
+.Exmenes-Simulacro {
+    font-family: Nunito;
+    font-size: 35px;
+    color: #004c84;
+    margin: 20px 122px 10px 122px;
+}
+
+/* Línea debajo del título */
+.Line-16 {
+    width: calc(100% - 244px);
+    height: 1.5px;
+    background-color: #004c84;
+    margin: 0 auto 20px auto;
+}
+
+/* Texto introductorio */
+.Aqu-podrs-practicar {
+    margin: 20px 122px 0 122px; /* Eliminamos el margen inferior */
+    font-family: Nunito;
+    font-size: 20px;
+    color: #000;
+}
+
+/* Frase motivacional */
+.frase-motivacional {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Estas-a-un-solo-paso-Tu-puedes {
+    font-family: RalewayDots;
+    font-size: 60px;
+    color: #000;
+}
+
+/* Menú de exámenes y elementos de estilo previos */
+.menu-examenes {
+    width: 60%;
+}
+
+.Rectangle-50 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+}
+
+.letra-2 img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.Examen-simulacro-1 {
+    font-family: Nunito;
+    font-size: 25px;
+    color: #004c84;
+    flex: 1;
+}
+
+.Iniciar {
+    width: 150px;
+    height: 50px;
+    flex-grow: 0;
+    margin: 14px 0 14px 34px;
+    font-family: Nunito;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #004c84;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

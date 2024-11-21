@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Estilos del logo */
+.logo img {
+    width: 350px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Divisor vertical entre el logo y los botones */
+.divider {
+    width: 2px; /* Línea vertical */
+    height: 40px; /* Altura de la línea */
+    background-color: #004C84; /* Color de la línea */
+    margin: 0 20px; /* Espaciado horizontal alrededor del divisor */
+}
+
+/* Contenedor de los botones de navegación */
+.nav-buttons {
+    display: flex;
+    justify-content: space-around; /* Distribuye espacio de forma uniforme */
+    flex-grow: 1; /* Hace que los botones usen el espacio disponible en el header */
+}
+
+/* Estilos de los botones de navegación */
+.nav-button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #237BBB;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que los botones se dividan en varias líneas */
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.nav-button:hover {
+    color: #004C84;
+}
+
+/* Subrayado al pasar el mouse */
+.nav-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    border-radius: 11px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover::after {
+    background-color: #004C84;
+}
+
+.Texto-Bienvenida {
+    width: 1000px;
+    height: 248px;
+    margin: 30px auto 10px auto; /* Centra horizontalmente */
+    font-family: 'Nunito', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: normal;
+    text-align: center;
+    color: #000;
+}
+
+/* Estilo para el contenedor de la imagen y el formulario */
+/* Contenedor principal para alinear imagen y formulario */
+.container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    padding: 20px;
+}
+
+/* Contenedor de la imagen y el formulario */
+.descripcion-con-imagen {
+    display: flex;
+    justify-content: space-between; /* Espacio entre la imagen y el texto */
+    margin: 0 66px 20px 66px; /* Márgenes laterales respecto al borde de la página */
+    align-items: stretch;
+}
+
+/* Estilo de la imagen */
+.imagen-inicio img {
+    max-width: 400px; /* Reduce el tamaño de la imagen */
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Mantiene la proporción sin deformar la imagen */
+}
+
+/* Estilo del cuadro con el formulario */
+.Rectangle {
+    width: 100%;
+    max-width: 547px; /* Limita el ancho máximo del rectángulo */
+    height: 525px;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para los campos de entrada y el botón */
+.Rectangle input, .Rectangle-2 button {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.Rectangle button {
+    background-color: #237bbb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Rectangle button:hover {
+    background-color: #004c84;
+}
+
+/* Estilo para el bloque de bienvenida */
+.Titulo {
+    width: 100%; /* Asegura que el div ocupe el 100% del ancho disponible */
+    height: 135px; /* Altura del bloque */
+    margin: 0 0 28px; /* Espacio inferior */
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #237bbb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente */
+    align-items: center; /* Centra el texto horizontalmente */
+}
+
+.Titulo .text-style-1 {
+    color: #000; /* Color del texto secundario */
+}
+
+.Olvidaste-tu-contrasea {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 25px;
+    margin: 5px 0 10px 0; /* Espaciado superior e inferior */
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #237bbb;
+    cursor: pointer; /* Indica que es clickeable */
+}
+
+.Olvidaste-tu-contrasea:hover {
+    text-decoration: underline; /* Subraya el texto al pasar el ratón */
+}
+
+/* Estilo para el botón "Iniciar sesión" */
+.Iniciar-sesion {
+    width: 467.7px;
+    height: 65px;
+    font-family: Nunito;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    color: #f5f5f8;
+    background-color: #237bbb; /* Color de fondo */
+    border: none;
+    border-radius: 40px; /* Bordes redondeados */
+    cursor: pointer; /* Indica que es clickeable */
+}
+
+.Iniciar-sesion:hover {
+    background-color: #1c66b2; /* Color al pasar el ratón sobre el botón */
+}
+
+.Iniciar-sesion:focus {
+    outline: none; /* Elimina el borde al hacer clic */
+}
+
+.NecesitasCuenta {
+    width: 469px;
+    height: 113px;
+    margin: 35px 20px 0;
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+  }
+  
+  .CrearCuenta {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 25px;
+    margin: 5px 0 10px 0; /* Espaciado superior e inferior */
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: bold;
+    color: #004c84;
+    text-align: center;
+    cursor: pointer; /* Indica que es clickeable */
+}
+  
+  .CrearCuenta:hover {
+    text-decoration: underline; /* Subraya el texto al pasar el ratón */
+}
+
+
+footer { width: 100%; /* Ocupa todo el ancho de la pantalla */ 
+    height: 75px; 
+    background-color: #004c84; text-align: center; /* Centra el contenido del footer */ 
+    color: white; 
+    font-family: 'Nunito', sans-serif; 
+    font-size: 16px; 
+    line-height: 75px; /* Centra el texto verticalmente */
+}

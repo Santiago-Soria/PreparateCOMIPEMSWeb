@@ -1,0 +1,65 @@
+{
+    "RazoVer": [
+      {
+        "pregunta": "¿Cuál es el sujeto en la oración 'El gato duerme plácidamente'?",
+        "opciones": ["El gato", "duerme", "plácidamente", "ninguno"],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "¿Qué tipo de palabra es 'yo'?",
+        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "¿Qué tipo de palabra es 'rápi'?",
+        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "¿Qué tipo de palabra es 'rápids'?",
+        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "¿Qué tipo de palabra es 'rápidamessssnte'?",
+        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
+        "correcta": "C"
+      }
+    ],
+
+
+
+    "matematicas": [
+      {
+        "pregunta": "¿Cuánto es 2 + 6?",
+        "opciones": ["3", "4", "5", "6"],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "¿Cuánto es 5 + 2?",
+        "opciones": ["3", "4", "5", "6"],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "¿Cuánto es 2 + 5?",
+        "opciones": ["3", "4", "5", "6"],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "¿Cuánto es 2 + 2?",
+        "opciones": ["3", "4", "5", "6"],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "¿Cuánto es 2 + 2?",
+        "opciones": ["3", "4", "5", "6"],
+        "correcta": "B"
+      }
+    ]
+
+
+
+
+
+    
+  }

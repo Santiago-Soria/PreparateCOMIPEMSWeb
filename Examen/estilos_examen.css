@@ -1,0 +1,220 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.menu-lateral {
+    background-color: #f5f5f8; /* Color de fondo */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 300px; /* Ancho fijo del menú */
+    background-color: #f5f5f8;
+    z-index: 10; /* Asegura que no se superponga contenido principal */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Desplazamiento si el contenido excede la altura */
+}
+ 
+
+.Seccin {
+        width: 100%;
+        text-align: center; /* Centra el texto horizontalmente */
+        font-family: Nunito, sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: #004c84;
+        background-color: #f5f5f8; /* Fondo igual al menú */
+        margin: 0 0 20px; /* Separar el título del resto del contenido */
+        padding: 10px 0; /* Espaciado interno */
+        border-bottom: 2px solid #004c84; /* Línea decorativa */
+    }
+
+.materias-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ocupa todo el ancho del menú lateral */
+    margin-top: 20px; /* Espaciado entre el título y las materias */
+    gap: 10px; /* Espacio uniforme entre las materias */
+    align-items: flex-start; /* Alineación al lado izquierdo */
+}
+
+
+.Rectangle-64 {
+    width: 100%; /* Asegura que ocupen todo el ancho disponible */
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative; /* Necesario para el despliegue del menú */
+}
+
+
+.materia-nombre {
+    width: 200px;
+    font-family: Nunito, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.Rectangle-64:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Panel desplegable */
+.Rectangle-2 {
+    width: 90%; /* Asegura que el ancho esté dentro de los límites */
+    margin: 10px auto; /* Centra el menú y ajusta el margen */
+    padding: 20px 10px; /* Reduce el espaciado interno */
+    border-radius: 10px;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: solid 1px #000;
+    background-color: #fff;
+    display: none; /* Oculto por defecto */
+    flex-wrap: wrap; /* Acomoda los cuadros en filas y columnas */
+    gap: 10px; /* Espacio uniforme entre cuadros */
+}
+
+
+
+.Rectangle-2.show {
+    display: flex;
+}
+
+.pregunta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.Rectangle-66 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #004c84;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Rectangle-66:hover {
+    background-color: #006bb3;
+}
+.flecha-desplegar {
+    align-self: flex-end; /* Mover flecha a la esquina derecha */
+    margin-top: -25px; /* Ajustar espacio para alineación */
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Biologa {
+    flex-grow: 1; /* Asegura que ocupe todo el espacio disponible */
+    text-align: center; /* Centra horizontalmente el texto */
+    font-family: Nunito, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+.Rectangle-68 {
+    width: 52.6px;
+    height: 50px;
+    margin: 1px 11.4px;
+    padding: 10px;
+    transform: rotate(-90deg); /* Rota el cuadro */
+    border: solid 1px #000;
+    background-color: #004c84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Texto blanco para contraste */
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer2 {
+    width: 100%; /* Ocupa todo el ancho de la página */
+    text-align: center; /* Centra el texto */
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #f5f5f8;
+    padding: 10px 0; /* Espaciado interno */
+    border-top: 1px solid #ddd; /* Línea decorativa */
+    position: relative; /* Asegura que no interfiera con el contenido */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.contenedor-examen {
+    margin-left: 300px; /* Compensa el ancho del menú lateral */
+    padding: 20px; /* Espaciado interno */
+    width: calc(100% - 300px); /* Ocupa el espacio restante */
+    background-color: #ffffff; /* Asegura visibilidad */
+    min-height: 100vh; /* Ocupa al menos la altura completa de la ventana */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+
+
+
+/* Diseño de Rectángulo de Preguntas */
+.Rectangle-71 {
+  width: 947px;
+  height: 372px;
+  margin: 30px 81px 34px 32px;
+  padding: 22px 21px 11px 15px;
+  border-radius: 24px;
+  background-color: #d8ecff;
+}
+
+/* Diseño de Rectángulo de Respuestas */
+.Rectangle-70 {
+  width: 947px;
+  height: 191px;
+  margin: 12px 81px 40px 32px;
+  padding: 68px 35px;
+  border-radius: 24px;
+  background-color: #0a89ff;
+}
+
+/* Estilos de los botones de navegación */
+.navegacion {
+    margin: 20px 81px 34px 32px;
+}
+
+#btn-anterior, #btn-siguiente {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#btn-anterior:hover, #btn-siguiente:hover {
+    background-color: #45a049;
+}
+
+.main-content {
+    display: flex; /* Alinear elementos en una fila */
+    flex-direction: row; /* Forzar alineación horizontal */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 100%; /* Opcional, para ocupar altura */
+}
