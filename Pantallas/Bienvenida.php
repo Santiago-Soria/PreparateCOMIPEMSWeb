@@ -47,6 +47,6 @@
     </div>
 </div>
 
-<!-- Footer -->
+<!-- Actualizate ya xd -->
 <footer class="footer">Derechos reservados a "PreparateCOMIPEMS"</footer>
 </body>
