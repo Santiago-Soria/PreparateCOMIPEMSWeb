@@ -2,7 +2,11 @@
     "RazonamientoVerbal": [
       {
         "pregunta": "¿Cuál es el sujeto en la oración 'El gato duerme plácidamente'?",
-        "opciones": ["El gato", "duerme", "plácidamente", "ninguno"],
+        "opciones": [{"texto": "El gato"},
+                     {"texto": "El gato"},
+                     {"texto": "El gato"},
+                     {"texto": "El gato"}
+        ],
         "correcta": "A"
       },
       {
@@ -21,7 +25,7 @@
         "correcta": "C"
       },
       {
-      "pregunta": "¿Cuál es el término que falta en la siguiente sucesión?\n10, -2, -14, -26",
+      "pregunta": "¿Cuál es el término que falta en la siguiente sucesión?\n10, -2, -14, -26\n",
       "opciones": ["-38", "-28", "-40", "-36"],
       "correcta": "A",
       "imagen": "imagenes/sucesion3.png"
@@ -31,31 +35,102 @@
     "RazonamientoMatematico": [
       {
         "pregunta": "¿Cuál es el término que falta en la siguiente sucesión? 10,-2,-14,-26",
-        "opciones": ["-38", "14", "-50", "-37"],
+        "opciones": [{"texto": "-38"},
+                     {"texto": "14"},
+                     {"texto": "-50"},
+                     {"texto": "-37"}
+        ],
         "correcta": "A"
       },
       {
         "pregunta": "Encuentra los términos que faltan en la siguiente sucesión. 5,12,16,8,27,4,_,_,...",
-        "opciones": ["49,0", "38,49", "38,0", "49,38"],
+        "opciones": [{"texto": "49,0"},
+                     {"texto": "38,49"},
+                     {"texto": "38,0"},
+                     {"texto": "49,38"}
+        ],
         "correcta": "C"
       },
       {
-        "pregunta": "¿Qué tipo de palabra es 'rápi'?",
-        "opciones": ["Sustantivo", "Atérdjetivo", "Adverbio", "Verbo"],
-        "correcta": "C"
+      "pregunta": "¿Cuál es el término que falta en la siguiente sucesión?\n10, -2, -14, -26\n",
+      "opciones": [{"texto": "-38"},
+                   {"texto": "-28"},
+                   {"texto": "-40"},
+                   {"texto": "-36"}
+      ],
+      "correcta": "A",
+      "imagen": "imagenes/sucesion3.png"
       },
       {
-        "pregunta": "¿Qué tipo de palabra es 'rápids'?",
-        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
-        "correcta": "C"
+        "pregunta": "Si se permite cualquier tipo de giro, ¿con cúal figura se completa un cuadrado?",
+        "opciones": [
+        {"imagen": "imagenes/sucesion4a.png"},
+        {"imagen": "imagenes/sucesion4b.png"},
+        {"imagen": "imagenes/sucesion4c.png"},
+        {"imagen": "imagenes/sucesion4d.png"}
+      ],
+        "correcta": "A",
+        "imagen": "imagenes/sucesion4.png"
       },
       {
-        "pregunta": "¿Qué tipo de palabra es 'rápidamessssnte'?",
-        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
-        "correcta": "C"
+        "pregunta": "¿Cuál es el número que falta?",
+        "opciones": [{"texto": "12"},
+                     {"texto": "14"},
+                     {"texto": "15"},
+                     {"texto": "16"}],
+        "correcta": "C",
+        "imagen": "imagenes/sucesion5.png"
       }
     ],
 
+
+    "Español": [
+      {
+        "pregunta": "¿Cuál es la finalidad de las fichas bibliográficas?",
+        "opciones": [{"texto": "Identificar una fuente consultada."},
+                     {"texto": "Resumir el contenido de un artículo."},
+                     {"texto": "Enumerar las ideas secundarias de un texto."},
+                     {"texto": "Organizar las ideas principales de un documento."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Conocer y conservar la biodiversidad de nuestro país tiene como consecuencia la",
+        "opciones": [{"texto": "regulación de sus recursos."},
+                     {"texto": "explotación inmoderada."},
+                     {"texto": "tala inmoderada."},
+                     {"texto": "extinción de especies."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Los helechos convierten la energía lumínica del sol en energía química de las moléculas de azúcar, a través de la",
+        "opciones": [{"texto": "fermentación"},
+                     {"texto": "respiración"},
+                     {"texto": "fotosíntesis"},
+                     {"texto": "excreción"}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "Nombre del proceso biológico que permite a los organismos pluricelulares incrementar su biomasa a través del tiempo.",
+        "opciones": [{"texto": "Cariocinesis."},
+                     {"texto": "Mitosis."},
+                     {"texto": "Meiosis."},
+                     {"texto": "Citocinesis."}
+        ],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "Es la estructura subcelular responsable de la transmisión de la información genética.",
+        "opciones": [{"texto": "Cromosoma."},
+                     {"texto": "Ribosoma."},
+                     {"texto": "Nucléolo."},
+                     {"texto": "Núcleo."}
+        ],
+        "correcta": "A"
+      }
+    ],
 
 
     "matematicas": [
@@ -84,11 +159,59 @@
         "opciones": ["3", "4", "5", "6"],
         "correcta": "B"
       }
+    ],
+
+
+    "Biologia": [
+      {
+        "pregunta": "Carlos Darwin establece que la selección natural se produce cuando",
+        "opciones": [{"texto": "los individuos están mejor adaptados al medio."},
+                     {"texto": "las características se mantienen a lo largo de la vida de los organismos."},
+                     {"texto": "el medio influye para el cambio de estructuras de los seres vivos."},
+                     {"texto": "los organismos se encuentran en un medio agradable para ellos."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Conocer y conservar la biodiversidad de nuestro país tiene como consecuencia la",
+        "opciones": [{"texto": "regulación de sus recursos."},
+                     {"texto": "explotación inmoderada."},
+                     {"texto": "tala inmoderada."},
+                     {"texto": "extinción de especies."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Los helechos convierten la energía lumínica del sol en energía química de las moléculas de azúcar, a través de la",
+        "opciones": [{"texto": "fermentación"},
+                     {"texto": "respiración"},
+                     {"texto": "fotosíntesis"},
+                     {"texto": "excreción"}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "Nombre del proceso biológico que permite a los organismos pluricelulares incrementar su biomasa a través del tiempo.",
+        "opciones": [{"texto": "Cariocinesis."},
+                     {"texto": "Mitosis."},
+                     {"texto": "Meiosis."},
+                     {"texto": "Citocinesis."}
+        ],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "Es la estructura subcelular responsable de la transmisión de la información genética.",
+        "opciones": [{"texto": "Cromosoma."},
+                     {"texto": "Ribosoma."},
+                     {"texto": "Nucléolo."},
+                     {"texto": "Núcleo."}
+        ],
+        "correcta": "A"
+      }
     ]
 
 
 
 
 
-    
   }

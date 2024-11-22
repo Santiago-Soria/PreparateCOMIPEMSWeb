@@ -69,20 +69,6 @@ body {
 }
 
 
-/* Panel desplegable */
-.Rectangle-2 {
-    width: 90%; /* Asegura que el ancho esté dentro de los límites */
-    margin: 10px auto; /* Centra el menú y ajusta el margen */
-    padding: 20px 10px; /* Reduce el espaciado interno */
-    border-radius: 10px;
-    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
-    border: solid 1px #000;
-    background-color: #fff;
-    display: none; /* Oculto por defecto */
-    flex-wrap: wrap; /* Acomoda los cuadros en filas y columnas */
-    gap: 10px; /* Espacio uniforme entre cuadros */
-}
-
 
 
 .Rectangle-2.show {
@@ -112,41 +98,7 @@ body {
 .Rectangle-66:hover {
     background-color: #006bb3;
 }
-.flecha-desplegar {
-    align-self: flex-end; /* Mover flecha a la esquina derecha */
-    margin-top: -25px; /* Ajustar espacio para alineación */
-    font-size: 18px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
 
-.Biologa {
-    flex-grow: 1; /* Asegura que ocupe todo el espacio disponible */
-    text-align: center; /* Centra horizontalmente el texto */
-    font-family: Nunito, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-    margin: 0; /* Elimina márgenes adicionales */
-}
-
-.Rectangle-68 {
-    width: 52.6px;
-    height: 50px;
-    margin: 1px 11.4px;
-    padding: 10px;
-    transform: rotate(-90deg); /* Rota el cuadro */
-    border: solid 1px #000;
-    background-color: #004c84;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff; /* Texto blanco para contraste */
-    font-family: Nunito, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-}
 
 .footer2 {
     width: 100%; /* Ocupa todo el ancho de la página */
@@ -171,33 +123,6 @@ body {
 }
 
 
-
-
-/* Diseño de Rectángulo de Preguntas */
-.Rectangle-71 {
-  width: 947px;
-  height: 372px;
-  margin: 30px 81px 34px 32px;
-  padding: 22px 21px 11px 15px;
-  border-radius: 24px;
-  background-color: #d8ecff;
-}
-
-/* Diseño de Rectángulo de Respuestas */
-.Rectangle-70 {
-  width: 947px;
-  height: 191px;
-  margin: 12px 81px 40px 32px;
-  padding: 68px 35px;
-  border-radius: 24px;
-  background-color: #0a89ff;
-}
-
-/* Estilos de los botones de navegación */
-.navegacion {
-    margin: 20px 81px 34px 32px;
-}
-
 #btn-anterior, #btn-siguiente {
     padding: 10px 20px;
     font-size: 16px;
@@ -217,4 +142,71 @@ body {
     flex-direction: row; /* Forzar alineación horizontal */
     width: 100%; /* Ocupa todo el ancho disponible */
     height: 100%; /* Opcional, para ocupar altura */
+}
+
+/* Contenedor de la pregunta */
+#pregunta-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: flex-start; /* Alinear contenido hacia arriba */
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ccc; /* Opcional: bordes para estética */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+    max-width: 800px; /* Limitar el ancho del contenedor */
+    margin: auto; /* Centrar el contenedor */
+}
+
+/* Texto de la pregunta */
+.texto-pregunta {
+    margin-bottom: 1rem; /* Espaciado entre texto e imagen */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Opcional: resaltar pregunta */
+}
+
+/* Imagen de la pregunta */
+.imagen-pregunta {
+    max-width: 100%; /* Escalar imagen al ancho del contenedor */
+    max-height: 300px; /* Limitar altura para evitar desbordes */
+    margin-top: 1rem; /* Espaciado superior */
+    object-fit: contain; /* Ajustar imagen sin deformarla */
+    border: 1px solid #ddd; /* Opcional: borde a la imagen */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+.accordion-body .btn {
+    margin: 2px; /* Espaciado uniforme entre botones */
+    display: inline-block; /* Asegura que los botones se mantengan alineados */
+}
+
+.question-btn.respondida {
+    background-color: #011323 !important; /* Color más oscuro */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Resaltar texto */
+}
+
+/* Contenedor de las respuestas */
+#respuesta-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaciado entre respuestas */
+}
+
+/* Estilo de cada opción de respuesta */
+.opcion-respuesta {
+    display: flex;
+    align-items: left;
+    gap: 1rem; /* Espaciado entre texto e imagen */
+    font-size: 1.2rem;
+}
+
+/* Imágenes en las respuestas */
+.imagen-respuesta {
+    max-width: 50px; /* Tamaño máximo */
+    max-height: 50px; /* Tamaño máximo */
+    object-fit: contain; /* Mantener proporción */
+    border: 1px solid #ddd; /* Opcional: borde */
+    border-radius: 5px; /* Opcional: esquinas redondeadas */
 }
