@@ -96,7 +96,7 @@ document.getElementById("opciones-respuesta").addEventListener("change", functio
 
 // Función para actualizar el índice dinámicamente
 function actualizarIndice(materia, pregunta) {
-    document.getElementById("indice").textContent = `Examen simulacro 1 >> Materia: ${materia} >> Pregunta: ${pregunta}`;
+    document.getElementById("indice").textContent = `Examen simulacro 1 > Materia: ${materia} > Pregunta: ${pregunta}`;
 }
 
 // Navegar entre preguntas con los botones "Anterior" y "Siguiente"

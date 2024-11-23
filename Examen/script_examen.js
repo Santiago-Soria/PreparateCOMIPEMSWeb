@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function actualizarIndice(materia, pregunta) {
-    document.getElementById('indice').textContent = `Examen simulacro 1 >> Materia: ${materia} >> Pregunta: ${pregunta}`;
+    document.getElementById('indice').textContent = `Examen simulacro 1 > Materia: ${materia} > Pregunta: ${pregunta}`;
 }
 
 button.addEventListener('click', () => {
