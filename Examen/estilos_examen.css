@@ -210,3 +210,9 @@ body {
     border: 1px solid #ddd; /* Opcional: borde */
     border-radius: 5px; /* Opcional: esquinas redondeadas */
 }
+
+.btn.respondida {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}

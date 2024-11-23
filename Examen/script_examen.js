@@ -99,6 +99,28 @@ function actualizarMenuLateral(preguntasMateria) {
             mostrarPregunta();
         });
     });
+
+    document.querySelectorAll('.btn[data-materia]').forEach(button => {
+        button.addEventListener('click', function() {
+            const materia = this.dataset.materia;
+            const pregunta = this.dataset.pregunta;
+            cargarPregunta(materia, pregunta); // Cargar la pregunta según la materia y número.
+        });
+    });
+    
+    function cargarPregunta(materia, pregunta) {
+        // Obtener datos de preguntas.json
+        const preguntas = datos[materia];
+        const preguntaData = preguntas[parseInt(pregunta) - 1];
+    
+        // Mostrar pregunta y opciones en el contenedor
+        document.getElementById('pregunta-contenedor').innerText = preguntaData.pregunta;
+        const opciones = document.getElementById('opciones-respuesta');
+        opciones.innerHTML = preguntaData.opciones.map((op, i) =>
+            `<label><input type="radio" name="respuesta" value="${String.fromCharCode(65 + i)}"> ${op.texto}</label><br>`
+        ).join('');
+    }
+    
 }
 
 // Navegación entre preguntas
@@ -147,4 +169,14 @@ function iniciarCronometro() {
 document.addEventListener("DOMContentLoaded", () => {
     cargarPreguntas("RazonamientoVerbal"); // Cargar preguntas iniciales de la materia
     iniciarCronometro(); // Iniciar cronómetro
+});
+
+function actualizarIndice(materia, pregunta) {
+    document.getElementById('indice').textContent = `Examen simulacro 1 >> Materia: ${materia} >> Pregunta: ${pregunta}`;
+}
+
+button.addEventListener('click', () => {
+    const materia = button.dataset.materia;
+    const pregunta = button.dataset.pregunta;
+    actualizarIndice(materia, pregunta);
 });
