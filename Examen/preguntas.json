@@ -1,34 +1,49 @@
 {
     "RazonamientoVerbal": [
       {
-        "pregunta": "¿Cuál es el sujeto en la oración 'El gato duerme plácidamente'?",
-        "opciones": [{"texto": "El gato"},
-                     {"texto": "El gato"},
-                     {"texto": "El gato"},
-                     {"texto": "El gato"}
+        "pregunta": "Lee el siguiente enunciado: \n\n Un pequeño esfuerzo del pescador le ''reditúa'' una ganancia económica muy alta. \n\n De acuerdo con el contexto, la palabra subrayada significa",
+        "opciones": [{"texto": "producir."},
+                     {"texto": "repercutir."},
+                     {"texto": "representar."},
+                     {"texto": "reflejar."}
         ],
         "correcta": "A"
       },
       {
-        "pregunta": "¿Qué tipo de palabra es 'yo'?",
-        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
+        "pregunta": "MÚSICO es a INSTRUMENTO como",
+        "opciones": [{"texto": "poeta a poesía"},
+                     {"texto": "mecánico a herramienta."},
+                     {"texto": "político a ley."},
+                     {"texto": "carpintero a carpintería."}
+        ],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "PALABRA - CONVENCER",
+        "opciones": [{"texto": "lectura - dormir"},
+                     {"texto": "teatro - oir"},
+                     {"texto": "imán - atraer"},
+                     {"texto": "audiencia - aceptar"}
+        ],
         "correcta": "C"
       },
       {
-        "pregunta": "¿Qué tipo de palabra es 'rápi'?",
-        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
-        "correcta": "C"
+        "pregunta": "Cual es el antonimo de actividades CLANDESTINAS",
+        "opciones": [{"texto": "Secretas."},
+                     {"texto": "Ilícitas."},
+                     {"texto": "Ocultas."},
+                     {"texto": "Públicas."}
+        ],
+        "correcta": "D"
       },
       {
-        "pregunta": "¿Qué tipo de palabra es 'rápids'?",
-        "opciones": ["Sustantivo", "Adjetivo", "Adverbio", "Verbo"],
-        "correcta": "C"
-      },
-      {
-      "pregunta": "¿Cuál es el término que falta en la siguiente sucesión?\n10, -2, -14, -26\n",
-      "opciones": ["-38", "-28", "-40", "-36"],
-      "correcta": "A",
-      "imagen": "imagenes/sucesion3.png"
+        "pregunta": "El tejón es un mamífero carnicero CORRIENTE en Europa.",
+        "opciones": [{"texto":"Exótico."},
+                     {"texto": "Común."},
+                     {"texto": "Rechazado."},
+                     {"texto": "Despreciable."}
+        ],
+        "correcta": "A"
       }
     ],
 
@@ -95,69 +110,94 @@
         "correcta": "A"
       },
       {
-        "pregunta": "Conocer y conservar la biodiversidad de nuestro país tiene como consecuencia la",
-        "opciones": [{"texto": "regulación de sus recursos."},
-                     {"texto": "explotación inmoderada."},
-                     {"texto": "tala inmoderada."},
-                     {"texto": "extinción de especies."}
+        "pregunta": "Mediante qué recurso se desarrollan las ideas en el siguiente párrafo?",
+        "opciones": [{"texto": "Repeticiones."},
+                     {"texto": "Explicaciones."},
+                     {"texto": "Paráfrasis."},
+                     {"texto": "Ejemplos."}
+        ],
+        "correcta": "B",
+        "imagen": "imagenes/español2.png"
+      },
+      {
+        "pregunta": "Los nexos luego,después, primero, antes, hacen referencia a",
+        "opciones": [{"texto": "tiempo."},
+                     {"texto": "lugar."},
+                     {"texto": "importancia."},
+                     {"texto": "perspectiva."}
         ],
         "correcta": "A"
       },
       {
-        "pregunta": "Los helechos convierten la energía lumínica del sol en energía química de las moléculas de azúcar, a través de la",
-        "opciones": [{"texto": "fermentación"},
-                     {"texto": "respiración"},
-                     {"texto": "fotosíntesis"},
-                     {"texto": "excreción"}
+        "pregunta": "Las palabras subrayadas en el siguiente fragmento tienen como propósito.",
+        "opciones": [{"texto": "Indicar el modo en que surgen las ideas."},
+                     {"texto": "Establecer los lugares de los eventos."},
+                     {"texto": "Dar un orden en las ideas."},
+                     {"texto": "Señalar el tiempo en el párrafo."}
         ],
-        "correcta": "C"
+        "correcta": "C",
+        "imagen": "imagenes/español4.png"
       },
       {
-        "pregunta": "Nombre del proceso biológico que permite a los organismos pluricelulares incrementar su biomasa a través del tiempo.",
-        "opciones": [{"texto": "Cariocinesis."},
-                     {"texto": "Mitosis."},
-                     {"texto": "Meiosis."},
-                     {"texto": "Citocinesis."}
+        "pregunta": "Lee el siguiente texto y elige cuál es el propósito del texto anterior.",
+        "opciones": [{"texto": "Comunicar fecha y horario de la presentación del libro."},
+                     {"texto": "Hacer un historial literario de Dan Brown."},
+                     {"texto": "Informar acerca de una novedad editorial."},
+                     {"texto": "Analizar la evolución literaria de Dan Brown."}
         ],
-        "correcta": "B"
-      },
-      {
-        "pregunta": "Es la estructura subcelular responsable de la transmisión de la información genética.",
-        "opciones": [{"texto": "Cromosoma."},
-                     {"texto": "Ribosoma."},
-                     {"texto": "Nucléolo."},
-                     {"texto": "Núcleo."}
-        ],
-        "correcta": "A"
+        "correcta": "C",
+        "imagen": "imagenes/español5.png"
       }
     ],
 
 
     "matematicas": [
       {
-        "pregunta": "¿Cuánto es 2 + 6?",
-        "opciones": ["3", "4", "5", "6"],
+        "pregunta": "120 es el 75% de",
+        "opciones": [{"texto": "200"},
+                     {"texto": "180"},
+                     {"texto": "160"},
+                     {"texto": "140"}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "La raíz cuadrada de 3.61 es",
+        "opciones": [{"texto": "1.805"},
+                     {"texto": "1.9"},
+                     {"texto": "7.22"},
+                     {"texto": "13.0321"}
+        ],
         "correcta": "B"
       },
       {
-        "pregunta": "¿Cuánto es 5 + 2?",
-        "opciones": ["3", "4", "5", "6"],
+        "pregunta": "La siguiente tabla presenta los resultados de una prueba de matemáticas. Suponiendo que se evaluaron a 40 alumnos, ¿cuántos obtuvieron 8 de calificación?",
+        "opciones": [{"texto": "18"},
+                     {"texto": "10"},
+                     {"texto": "16"},
+                     {"texto": "12"}
+        ],
+        "correcta": "B",
+        "imagen": "imagenes/mate3.png"
+      },
+      {
+        "pregunta": "Las estaturas de los integrantes de un equipo de fútbol fueron:\n\n 1.82 m, 1.78 m, 1.74 m, 1.76 m, 1.76 m, 1.81 m, 1.77 m, 1.68 m, 1.74 m, 1.69 m y 1.65 m \n\n ¿Cuál fue la mediana de las estaturas ordenadas? ",
+        "opciones": [{"texto": "1.74 m"},
+                     {"texto": "1.76 m"},
+                     {"texto": "1.78 m"},
+                     {"texto": "1.81 m"}
+        ],
         "correcta": "B"
       },
       {
-        "pregunta": "¿Cuánto es 2 + 5?",
-        "opciones": ["3", "4", "5", "6"],
-        "correcta": "B"
-      },
-      {
-        "pregunta": "¿Cuánto es 2 + 2?",
-        "opciones": ["3", "4", "5", "6"],
-        "correcta": "B"
-      },
-      {
-        "pregunta": "¿Cuánto es 2 + 2?",
-        "opciones": ["3", "4", "5", "6"],
-        "correcta": "B"
+        "pregunta": "El área del paralelogramo que se observa en la figura es",
+        "opciones": [{"texto": "12 metros cuadrados"},
+                     {"texto": "18 metros cuadrados"},
+                     {"texto": "24 metros cuadrados"},
+                     {"texto": "36 metros cuadrados"}
+        ],
+        "correcta": "D",
+        "imagen": "imagenes/mate5.png"
       }
     ],
 
@@ -207,6 +247,252 @@
                      {"texto": "Núcleo."}
         ],
         "correcta": "A"
+      }
+    ],
+
+
+    "Fisica": [
+      {
+        "pregunta": "Si se dice que un automóvil se desplaza a 60 km/h sobre la avenida Insurgentes, de norte a sur, se está hablando de la _ del automóvil.",
+        "opciones": [{"texto": "velocidad"},
+                     {"texto": "aceleración"},
+                     {"texto": "rapidez"},
+                     {"texto": "fuerza"}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "A un carrito de supermercado cuya masa es m, le aplicamos una fuerza F, produciéndole una aceleración a. Si duplicamos la masa de mercancía que contiene el carrito y mantenemos la misma fuerza ¿Cuál será el valor de la aceleración?",
+        "opciones": [{"texto": "Un doble de su valor inicial."},
+                     {"texto": "Un cuarto de su valor inicial."},
+                     {"texto": "Mantiene su valor inicial."},
+                     {"texto": "La mitad de su valor inicial."}
+        ],
+        "correcta": "D"
+      },
+      {
+        "pregunta": "El choque de las partículas de un gas con las paredes del recipiente que lo contiene da lugar a la",
+        "opciones": [{"texto": "presión del gas."},
+                     {"texto": "temperatura del gas."},
+                     {"texto": "energía potencial del gas."},
+                     {"texto": "densidad del gas."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "En todo proceso en el que se da un cambio en el estado de agregación en la materia ocurre una _ de energia.",
+        "opciones": [{"texto": "pérdida"},
+                     {"texto": "ganancia"},
+                     {"texto": "transferencia"},
+                     {"texto": "creación"}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "La masa de un átomo está determinada por sus",
+        "opciones": [{"texto": "electrones y neutrones."},
+                     {"texto": "electrones."},
+                     {"texto": "neutrones y protones."},
+                     {"texto": "neutrones."}
+        ],
+        "correcta": "C"
+      }
+    ],
+
+
+    "Quimica": [
+      {
+        "pregunta": "Si representamos a la molécula de agua (H2O) mediante esferas de plastilina unidas por palillos, esta representación es",
+        "opciones": [{"texto": "un modelo científico."},
+                     {"texto": "una interpretación objetiva."},
+                     {"texto": "una formulación de una teoría."},
+                     {"texto": "una relación hipotética."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Propiedades que permiten cuantificar los materiales",
+        "opciones": [{"texto": "Masa y volumen."},
+                     {"texto": "Peso y solubilidad."},
+                     {"texto": "Longitud y tiempo."},
+                     {"texto": "Densidad y temperatura."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Se le llama _ al material formado, con una distribución uniforme que conserva sus propiedades originales.",
+        "opciones": [{"texto": "compuesto."},
+                     {"texto": "elemento."},
+                     {"texto": "mezcla homogénea."},
+                     {"texto": "mezcla heterogénea."}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "Partículas subatómicas responsables de que ocurran las reacciones químicas.",
+        "opciones": [{"texto": "Neutrones."},
+                     {"texto": "Electrones internos."},
+                     {"texto": "Protones."},
+                     {"texto": "Electrones externos."}
+        ],
+        "correcta": "D"
+      },
+      {
+        "pregunta": "Los elementos que tienden a perder electrones, son dúctles y maleables se consideran",
+        "opciones": [{"texto": "metálicos."},
+                     {"texto": "semimetales."},
+                     {"texto": "halógenos."},
+                     {"texto": "no metales."}
+        ],
+        "correcta": "A"
+      }
+    ],
+
+
+    "Historia":[
+      {
+        "pregunta": "Indica la letra que señala el lugar al que arribó Cristóbal Colón en su primer viaje a América.",
+        "opciones": [{"texto": "l."},
+                     {"texto": "ll."},
+                     {"texto": "lll."},
+                     {"texto": "lV."}
+        ],
+        "correcta": "B",
+        "imagen": "imagenes/historia1.png"
+      },
+      {
+        "pregunta": "La guerra de los siete años en el siglo XVlll entre Francia e Inglaterra se considera como causa externa de la independencia",
+        "opciones": [{"texto": "de la Nueva España."},
+                     {"texto": "del Virreinato de Río de la Plata."},
+                     {"texto": "de las Indias."},
+                     {"texto": "de las Trece Colonias."}
+        ],
+        "correcta": "D"
+      },
+      {
+        "pregunta": "La flota estadounidense en Pearl Harbor fue atacada por los",
+        "opciones": [{"texto": "japoneses."},
+                     {"texto": "chinos."},
+                     {"texto": "coreanos."},
+                     {"texto": "rusos."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Una de las características del Absolutismo Ilustrado de los borbones consistía en que el poder",
+        "opciones": [{"texto": "lo disponía el pueblo."},
+                     {"texto": "recaía en el rey."},
+                     {"texto": "era propio de la nobleza."},
+                     {"texto": "lo detentaba el clero."}
+        ],
+        "correcta": "B"
+      },
+      {
+        "pregunta": "Uno de los objetivos del Tratado de Libre Comercio con América del Norte es",
+        "opciones": [{"texto": "acrecentar los impuestos comerciales."},
+                     {"texto": "limitar las exportaciones e inversiones."},
+                     {"texto": "aumentar las oportunidades de inversión."},
+                     {"texto": "fomentar la mano de obra de migrantes."}
+        ],
+        "correcta": "C"
+      }
+    ],
+
+
+    "Geografia":[
+      {
+        "pregunta": "Componentes del espacio geográfico que incluyen las actividades que se relacionan con la producción, transporte, comercialización y consumo de bienes y servicios.",
+        "opciones": [{"texto": "Políticos."},
+                     {"texto": "Sociales."},
+                     {"texto": "Económicos."},
+                     {"texto": "Físicos."}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "Los husos horarios son una prueba y una consecuencia de la",
+        "opciones": [{"texto": "traslación geográfica."},
+                     {"texto": "rotación del sol."},
+                     {"texto": "rotación terrestre."},
+                     {"texto": "inclinación del eje."}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "La zona arqueológica de Palenque se encuentra en el estado de",
+        "opciones": [{"texto": "Chiapas."},
+                     {"texto": "Veracruz."},
+                     {"texto": "Oaxaca."},
+                     {"texto": "Guerrero."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Se establecen con el propósito de evitar conflictos y determinar hasta dónde un estado ejerce su soberanía",
+        "opciones": [{"texto": "Regiones."},
+                     {"texto": "Territorios."},
+                     {"texto": "Fronteras."},
+                     {"texto": "Entidades."}
+        ],
+        "correcta": "C"
+      },
+      {
+        "pregunta": "Está considerada como área del territorio nacional de 12 millas náuticas (22.2 km mar adentro).",
+        "opciones": [{"texto": "Mar territorial."},
+                     {"texto": "Zona insular."},
+                     {"texto": "Mar Patrimonial."},
+                     {"texto": "Zona Económica Exclusiva."}
+        ],
+        "correcta": "A"
+      }
+    ],
+
+
+    "FCyE":[
+      {
+        "pregunta": "Un ejemplo de valor moral deseable en los estudiantes es que",
+        "opciones": [{"texto": "sean honestos en los exámenes."},
+                     {"texto": "hagan sus tareas con limpieza."},
+                     {"texto": "sean creativos al hacer sus trabajos."},
+                     {"texto": "coman frutas y verduras."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "Es el valor que consiste en la facultad que tienen los seres humanos para actuar según su propio parecer, en un sentido o en otro, por lo que son responsables de los actos que realizan",
+        "opciones": [{"texto": "libertad."},
+                     {"texto": "tolerancia."},
+                     {"texto": "reciprocidad."},
+                     {"texto": "integridad."}
+        ],
+        "correcta": "A"
+      },
+      {
+        "pregunta": "El poder _, de acuerdo con la Constitución, interpreta y aplica las normas para resolver conflictos.",
+        "opciones": [{"texto": "legislativo"},
+                     {"texto": "ejecutivo"},
+                     {"texto": "absoluto"},
+                     {"texto": "judicial"}
+        ],
+        "correcta": "D"
+      },
+      {
+        "pregunta": "Asociaciones de ciudadanos que se forman para obtener puestos de elección popular.",
+        "opciones": [{"texto": "Las mesas electorales."},
+                     {"texto": "Los institutos electorales."},
+                     {"texto": "Los tribunales electorales."},
+                     {"texto": "Los partidos políticos."}
+        ],
+        "correcta": "D"
+      },
+      {
+        "pregunta": "Son obligaciones del gobierno para con los ciudadanos el proporcionar los servicios de",
+        "opciones": [{"texto": "trabajo, alimentación y salud."},
+                     {"texto": "salud, educación y seguridad."},
+                     {"texto": "alimentación, salud y educación."},
+                     {"texto": "educación, alimentación y trabajo."}
+        ],
+        "correcta": "B"
       }
     ]
 
