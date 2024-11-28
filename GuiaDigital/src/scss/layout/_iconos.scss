@@ -1,0 +1,43 @@
+.icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+
+    &-1 {
+        background-color: $razonamiento_verbal;
+    }
+    &-2 {
+        background-color: $razonamiento_matematico;
+    }
+    &-3 {
+        background-color: $espanol;
+    }
+    &-4 {
+        background-color: $matematicas;
+    }
+    &-5 {
+        background-color: $biologia;
+    }
+    &-6 {
+        background-color: $fisica;
+    }
+    &-7 {
+        background-color: $quimica;
+    }
+    &-8 {
+        background-color: $historia;
+    }
+    &-9 {
+        background-color: $geografia;
+    }
+    &-10 {
+        background-color: $fcye;
+    }
+
+    img {
+        height: 60%;
+    }
+}

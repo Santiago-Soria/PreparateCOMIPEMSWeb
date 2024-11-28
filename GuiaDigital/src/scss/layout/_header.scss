@@ -1,0 +1,27 @@
+.header{
+    padding: 1rem 0 3rem 0;
+    background-color: $blanco;
+    box-shadow: 0 0 1rem $gris;
+    @include tablet{
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+}
+
+.contenido-header{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.titulo{
+    color: $azulOscuro;
+    font-weight: 700;
+    font-size: 3rem;
+    border-bottom: .2rem solid $azulOscuro;
+    width: max-content;
+}
+
+.descripcion{
+    font-family: .8rem;
+}
