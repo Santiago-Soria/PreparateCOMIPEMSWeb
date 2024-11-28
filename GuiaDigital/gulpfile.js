@@ -1,4 +1,4 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss')
@@ -7,11 +7,6 @@ const cssnano = require('cssnano');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser-js');
 const rename = require('gulp-rename');
-const imagemin = require('gulp-imagemin'); // Minificar imagenes 
-const notify = require('gulp-notify');
-const cache = require('gulp-cache');
-const clean = require('gulp-clean');
-const webp = require('gulp-webp');
 
 const paths = {
     scss: 'src/scss/**/*.scss',
