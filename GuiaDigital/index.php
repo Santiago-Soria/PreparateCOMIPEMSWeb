@@ -119,7 +119,7 @@ try {
             <?php
                     for ($i = 5; $i < 10; $i++) {
             ?>
-                <div class="accordion-item">
+                <div class="accordion-item accordion-item-materias">
                     <div class="item-header">
                         <h2 class="accordion-header">
                             <div class="icono" style="background-color: <?php echo htmlspecialchars($materias[$i]['color']); ?>;">

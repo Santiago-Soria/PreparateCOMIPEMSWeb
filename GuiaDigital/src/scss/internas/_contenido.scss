@@ -110,3 +110,11 @@
         border-bottom: .05rem solid $gris;
     }
 }
+
+.enlace-tema-contenido{
+    color: $negro;
+    &:hover{
+        text-decoration: underline;
+        color: $azulOscuro;
+    }
+}

@@ -116,7 +116,7 @@ try {
                                 }
                                 foreach ($temas as $tema) {
                                 ?>
-                                    <li><a href="#"><?php echo htmlspecialchars($tema['nombre']); ?></a></li>
+                                    <li><a href="#" class="enlace-tema-contenido"><?php echo htmlspecialchars($tema['nombre']); ?></a></li>
                                 <?php
                                 }
                                 ?>
