@@ -74,7 +74,7 @@ incluirTemplate('header');
                                                 foreach ($bloques as $bloque) { ?>
                                                     <li>
                                                         <div class="accordion-subject">
-                                                            <a href="./contenido.php?bloque=<?php echo htmlspecialchars($bloque['id_bloque']); ?>">
+                                                            <a href="./contenido.php?materia=<?php echo htmlspecialchars($materias[$i]['id_materia'])?>&bloque=<?php echo htmlspecialchars($bloque['id_bloque']); ?>">
                                                                 <p><?php echo htmlspecialchars($bloque['nombre_bloque']); ?></p>
                                                             </a>
                                                             <div class="form-check">
@@ -115,17 +115,42 @@ incluirTemplate('header');
                     <div id="<?php echo htmlspecialchars($materias[$i]['id_materia']); ?>" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <ol>
-                                <li>
-                                    <div class="accordion-subject">
-                                        <a href="#">
-                                            <p><?php /*echo htmlspecialchars($materias[$i]['nombre_materias']);*/ ?></p>
-                                        </a>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckCheckedDisabled" disabled>
-                                        </div>
-                                    </div>
-                                </li>
+                                <?php
+                                try {
+                                    $id_materia = $materias[$i]['id_materia'];
+                                    $query = "
+                                                    SELECT
+                                                        b.nombre AS nombre_bloque,
+                                                        b.id_bloque AS id_bloque
+                                                    FROM
+                                                        bloque b
+                                                    JOIN
+                                                        materia m ON b.id_materia = m.id_materia AND m.id_materia = '{$id_materia}';
+                                                ";
+
+                                    $bloques = consultaBD($query, $pdo, true);
+
+                                    // Mostrar los resultados
+                                    if (!empty($materias)) {
+                                        foreach ($bloques as $bloque) { ?>
+                                            <li>
+                                                <div class="accordion-subject">
+                                                    <a href="./contenido.php?materia=<?php echo htmlspecialchars($materias[$i]['id_materia'])?>&bloque=<?php echo htmlspecialchars($bloque['id_bloque']);?>">
+                                                        <p><?php echo htmlspecialchars($bloque['nombre_bloque']); ?></p>
+                                                    </a>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckCheckedDisabled" disabled>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                <?php }
+                                    }
+                                } catch (PDOException $e) {
+                                    // Manejo de error en la consulta
+                                    echo "Error al realizar la consulta: " . $e->getMessage();
+                                }
+                                ?>
                             </ol>
                         </div>
                     </div>
