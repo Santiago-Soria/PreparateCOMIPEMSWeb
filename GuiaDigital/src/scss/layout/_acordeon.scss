@@ -1,8 +1,10 @@
 .accordion{
-    @include tablet{
-        @include grid(2, 1rem $separacion);
-        align-items: start;
-        grid-auto-rows: auto;
+    &-materias{
+        @include tablet{
+            @include grid(2, 1rem $separacion);
+            align-items: start;
+            grid-auto-rows: auto;
+        }
     }
 }
 
@@ -10,8 +12,10 @@
     height: auto;
     overflow: hidden;
     border: none;
-    border-radius: 2rem !important;
-    box-shadow: 0 .3rem .2rem $gris;
+    &-materias{
+        border-radius: 2rem !important;
+        box-shadow: 0 .3rem .2rem $gris;
+    }
     margin-bottom: 2rem;
 
     .accordion-header{

@@ -7,6 +7,9 @@
         top: 0;
         z-index: 100;
     }
+    @include desktop{
+        padding: 0;
+    }
 }
 
 .contenido-header{
