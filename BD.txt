@@ -34,7 +34,7 @@ CREATE TABLE Tema
 (
   Id_tema INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(45) NOT NULL,
-  contenido JSON NOT NULL,
+  contenido VARCHAR(45) NOT NULL,
   Id_bloque INT NOT NULL,
   PRIMARY KEY (Id_tema),
   FOREIGN KEY (Id_bloque) REFERENCES Bloque(Id_bloque)
@@ -120,3 +120,15 @@ INSERT INTO Materia (nombre, icono, color) VALUES
 ('Historia', 'icono_historia.svg', '#CA5B43'),
 ('Geografía', 'icono_geografia.svg', '#68EB7D'),
 ('Formación Cívica y Ética', 'icono_fcye.svg', '#D96757');
+
+INSERT INTO Bloque (nombre, id_materia) VALUES
+('Comprensión de lectura', 1),
+('Establecer analogías entre palabras', 1),
+('Distinguir palabras con significado similar', 1),
+('Distinguir palabras con significado opuesto ', 1);
+
+INSERT INTO Tema (nombre, contenido, id_bloque) VALUES
+('Procesos de lectura','1.json',1),
+('Analogías','',2),
+('Palabras con significado similar','',3),
+('Palabras con significado opuesto','',4);

@@ -1,0 +1,18 @@
+.footer{
+    background-color: $azulOscuro;
+    margin-bottom: 0;
+
+    .navegacion{
+        justify-content: center;
+    }
+
+    .contenedor-footer{
+        padding-top: $separacion / 2;
+    }
+
+    .copyright{
+        color: $blanco;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
