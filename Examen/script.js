@@ -74,6 +74,8 @@ function cargarPregunta(materia, pregunta) {
 
     document.getElementById("opciones-respuesta").innerHTML = opciones;
     document.getElementById("indice").textContent = `Materia: ${materia} > Pregunta: ${pregunta}`;
+
+    document.getElementById("btn-anterior").style.display = pregunta > 1 || Object.keys(datos).indexOf(materia) > 0 ? "block" : "none";
 }
 
 // Guardar respuesta seleccionada
@@ -121,25 +123,36 @@ function confirmarFinalizar() {
 }
 
 function calcularResultados() {
-    let aciertos = 0;
-    let totalPreguntas = 0;
+    let aciertosTotales = 0;
+    let totalPreguntasTotales = 0;
+    const resultadosPorMateria = {};
 
     for (const [materia, respuestas] of Object.entries(respuestasCorrectas)) {
+        let correctas = 0;
         respuestas.forEach((respuesta, index) => {
             const idPregunta = `${materia}-${index + 1}`;
-            if (respuestasUsuario[idPregunta]) { // Si hay respuesta del usuario
-                totalPreguntas++;
+            if (respuestasUsuario[idPregunta]) {
+                totalPreguntasTotales++;
                 if (respuestasUsuario[idPregunta] === respuesta) {
-                    aciertos++;
+                    correctas++;
+                    aciertosTotales++;
                 }
             }
         });
+
+        // Guardar resultados por materia
+        resultadosPorMateria[materia] = {
+            correctas: correctas,
+            preguntas: respuestas.length,
+        };
     }
 
-    // Guardar resultados en el localStorage
-    localStorage.setItem("resultadoExamen", JSON.stringify({ aciertos, total: totalPreguntas }));
+    // Guardar resultados globales y por materia en localStorage
+    localStorage.setItem("resultadoExamen", JSON.stringify({ aciertos: aciertosTotales, total: totalPreguntasTotales }));
+    localStorage.setItem("resultadoExamenPorMateria", JSON.stringify(resultadosPorMateria));
 }
 
+// Mostrar resultados en Retroalimentacion.html
 function mostrarResultadosRetroalimentacion() {
     const resultado = JSON.parse(localStorage.getItem("resultadoExamen"));
 
@@ -151,11 +164,8 @@ function mostrarResultadosRetroalimentacion() {
     }
 
     const { aciertos, total } = resultado;
-
-    // Calcular porcentaje
     const porcentaje = ((aciertos / total) * 100).toFixed(2);
 
-    // Determinar calificación
     let calificacion;
     if (porcentaje >= 80) {
         calificacion = "Excelente";
@@ -165,11 +175,12 @@ function mostrarResultadosRetroalimentacion() {
         calificacion = "Malo";
     }
 
-    // Actualizar valores en el DOM
     document.getElementById("detalle-resultado").textContent = `Puntaje total: ${aciertos}/${total}`;
     document.getElementById("porcentaje-aciertos").textContent = `Porcentaje de aciertos: ${porcentaje}%`;
     document.getElementById("calificacion-aciertos").textContent = `Calificación: ${calificacion}`;
 }
+
+
 
 // Cronómetro
 function iniciarCronometro() {
@@ -187,4 +198,47 @@ function iniciarCronometro() {
             tiempo--;
         }
     }, 1000);
+}
+
+function mostrarResumenGeneral() {
+    document.getElementById("resumen-general").style.display = "block";
+    document.getElementById("resultados-asignatura").style.display = "none";
+}
+
+function mostrarResultadosPorAsignatura() {
+    const resultados = JSON.parse(localStorage.getItem("resultadoExamenPorMateria")) || {};
+    const tablaResultados = document.getElementById("tabla-resultados");
+
+    // Limpiar la tabla antes de llenarla
+    tablaResultados.innerHTML = "";
+
+    // Construir las filas dinámicamente
+    for (const materia in respuestasCorrectas) {
+        const totalPreguntas = respuestasCorrectas[materia].length;
+        const correctas = resultados[materia]?.correctas || 0;
+        const incorrectas = totalPreguntas - correctas;
+        const porcentaje = ((correctas / totalPreguntas) * 100).toFixed(2);
+
+        // Determinar color del porcentaje
+        let colorClase = "";
+        if (porcentaje >= 80) colorClase = "table-success"; // Verde
+        else if (porcentaje >= 60) colorClase = "table-warning"; // Amarillo
+        else colorClase = "table-danger"; // Rojo
+
+        // Agregar la fila a la tabla
+        const fila = `
+            <tr>
+                <td>${materia}</td>
+                <td>${totalPreguntas}</td>
+                <td style="color: green;">${correctas}</td>
+                <td style="color: red;">${incorrectas}</td>
+                <td class="${colorClase}">${porcentaje}%</td>
+            </tr>
+        `;
+        tablaResultados.innerHTML += fila;
+    }
+
+    // Mostrar tabla y ocultar otros contenidos
+    document.getElementById("resumen-general").style.display = "none";
+    document.getElementById("resultados-asignatura").style.display = "block";
 }
