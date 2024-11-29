@@ -1,0 +1,16 @@
+.footer{
+    background-color: $azulOscuro;
+
+    .navegacion{
+        justify-content: center;
+    }
+
+    .contenedor-footer{
+        padding-top: $separacion / 2;
+    }
+
+    .copyright{
+        color: $blanco;
+        text-align: center;
+    }
+}

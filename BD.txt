@@ -1,0 +1,122 @@
+DROP DATABASE IF EXISTS PreparateCOMIPEMS;
+CREATE DATABASE PreparateCOMIPEMS;
+USE PreparateCOMIPEMS;
+
+CREATE TABLE Usuario
+(
+  Id_usuario INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  correo VARCHAR(45) NOT NULL,
+  contrasena VARCHAR(45) NOT NULL,
+  PRIMARY KEY (Id_usuario),
+  UNIQUE (correo)
+);
+
+CREATE TABLE Materia
+(
+  Id_materia INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  icono VARCHAR(45) NOT NULL,
+  color VARCHAR(45) NOT NULL,
+  PRIMARY KEY (Id_materia)
+);
+
+CREATE TABLE Bloque
+(
+  Id_bloque INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  Id_materia INT NOT NULL,
+  PRIMARY KEY (Id_bloque),
+  FOREIGN KEY (Id_materia) REFERENCES Materia(Id_materia)
+);
+
+CREATE TABLE Tema
+(
+  Id_tema INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  contenido JSON NOT NULL,
+  Id_bloque INT NOT NULL,
+  PRIMARY KEY (Id_tema),
+  FOREIGN KEY (Id_bloque) REFERENCES Bloque(Id_bloque)
+);
+
+CREATE TABLE Cuestionario
+(
+  Id_cuestionario INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  Id_bloque INT NOT NULL,
+  PRIMARY KEY (Id_cuestionario),
+  FOREIGN KEY (Id_bloque) REFERENCES Bloque(Id_bloque)
+);
+
+CREATE TABLE ExamenSimulacro
+(
+  Id_examen INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  PRIMARY KEY (Id_examen)
+);
+
+CREATE TABLE Pregunta
+(
+  Id_pregunta INT NOT NULL AUTO_INCREMENT,
+  pregunta VARCHAR(100) NOT NULL,
+  opcion_correcta CHAR(1) NOT NULL,
+  Id_cuestionario INT,
+  PRIMARY KEY (Id_pregunta),
+  FOREIGN KEY (Id_cuestionario) REFERENCES Cuestionario(Id_cuestionario)
+);
+
+CREATE TABLE ProgresoEstudiante
+(
+  Id_progreso_estudiante INT NOT NULL AUTO_INCREMENT,
+  completado BIT NOT NULL,
+  Id_tema INT NOT NULL,
+  Id_usuario INT NOT NULL,
+  PRIMARY KEY (Id_progreso_estudiante),
+  FOREIGN KEY (Id_tema) REFERENCES Tema(Id_tema),
+  FOREIGN KEY (Id_usuario) REFERENCES Usuario(Id_usuario)
+);
+
+CREATE TABLE ResultadoCuestionario
+(
+  Id_resultado_cuestionario INT NOT NULL AUTO_INCREMENT,
+  score INT NOT NULL,
+  Id_usuario INT NOT NULL,
+  Id_cuestionario INT NOT NULL,
+  PRIMARY KEY (Id_resultado_cuestionario),
+  FOREIGN KEY (Id_usuario) REFERENCES Usuario(Id_usuario),
+  FOREIGN KEY (Id_cuestionario) REFERENCES Cuestionario(Id_cuestionario)
+);
+
+CREATE TABLE ResultadoExamen
+(
+  Id_resultado_examen INT NOT NULL AUTO_INCREMENT,
+  score INT NOT NULL,
+  precisionPorTema JSON NOT NULL,
+  Id_usuario INT NOT NULL,
+  Id_examen INT NOT NULL,
+  PRIMARY KEY (Id_resultado_examen),
+  FOREIGN KEY (Id_usuario) REFERENCES Usuario(Id_usuario),
+  FOREIGN KEY (Id_examen) REFERENCES ExamenSimulacro(Id_examen)
+);
+
+CREATE TABLE Simulacro_pregunta
+(
+  Id_examen INT NOT NULL,
+  Id_pregunta INT NOT NULL,
+  PRIMARY KEY (Id_examen, Id_pregunta),
+  FOREIGN KEY (Id_examen) REFERENCES ExamenSimulacro(Id_examen),
+  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta)
+);
+
+INSERT INTO Materia (nombre, icono, color) VALUES
+('Razonamiento Verbal', 'icono_razonamiento_verbal.svg', '#68B4EB'),
+('Razonamiento Matemático', 'icono_razonamiento_matematico.svg', '#68EB8C'),
+('Español', 'icono_espanol.svg', '#EBAE68'),
+('Matemáticas', 'icono_matematicas.svg', '#E8EB68'),
+('Biología', 'icono_biologia.svg', '#5DB64F'),
+('Física', 'icono_fisica.svg', '#4489BB'),
+('Química', 'icono_quimica.svg', '#A569D4'),
+('Historia', 'icono_historia.svg', '#CA5B43'),
+('Geografía', 'icono_geografia.svg', '#68EB7D'),
+('Formación Cívica y Ética', 'icono_fcye.svg', '#D96757');
