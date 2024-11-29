@@ -21,3 +21,15 @@ function conectarDB()
 
     return $pdo;
 }
+
+function consultaBD($query, $pdo, bool $fetchALL)
+{
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+
+    // Obtener los resultados
+    if($fetchALL){
+        return  $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    return  $stmt->fetch(PDO::FETCH_ASSOC);
+}

@@ -27,11 +27,9 @@ try {
         materia m ON b.id_materia = m.id_materia
     WHERE id_tema='{$id_tema}';
     ";
-    $stmt = $pdo->prepare($query);
-    $stmt->execute();
 
     // Obtener los resultados
-    $contenido = $stmt->fetch(PDO::FETCH_ASSOC);
+    $contenido = consultaBD($query, $pdo, false);
     // Imprimir el arreglo
     // echo '<pre>'; // Formatea la salida para facilitar la lectura
     // print_r($contenido);
@@ -62,15 +60,7 @@ try {
                         bloque
                     WHERE id_materia='{$id_materia}';
                     ";
-                $stmt = $pdo->prepare($query);
-                $stmt->execute();
-
-                // Obtener los resultados
-                $bloques = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                // Imprimir el arreglo
-                // echo '<pre>'; // Formatea la salida para facilitar la lectura
-                // print_r($bloques);
-                // echo '</pre>';
+                $bloques = consultaBD($query, $pdo, true);
             } catch (PDOException $e) {
                 // Manejo de error en la consulta
                 echo "Error al realizar la consulta: " . $e->getMessage();
@@ -93,9 +83,7 @@ try {
                                 try {
                                     $id_bloque = $bloque['id_bloque'];
                                     $query = "SELECT id_tema, nombre FROM tema WHERE id_bloque = '{$id_bloque}'";
-                                    $stmt = $pdo->prepare($query);
-                                    $stmt->execute();
-                                    $temas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                    $temas = consultaBD($query, $pdo, true);
                                 } catch (PDOException $e) {
                                     // Manejo de error en la consulta
                                     echo "Error al realizar la consulta: " . $e->getMessage();

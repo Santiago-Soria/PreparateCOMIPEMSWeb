@@ -1,6 +1,6 @@
 <?php
 // Base de datos
-require __DIR__.'/includes/config/database.php';
+require __DIR__ . '/includes/config/database.php';
 $pdo = conectarDB();
 
 require 'includes/funciones.php';
@@ -31,11 +31,9 @@ incluirTemplate('header');
                         FROM 
                             materia;
                     ";
-                $stmt = $pdo->prepare($query);
-                $stmt->execute();
 
                 // Obtener los resultados
-                $materias = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $materias = consultaBD($query, $pdo, true);
 
                 // Mostrar los resultados
                 if (!empty($materias)) {
@@ -61,24 +59,22 @@ incluirTemplate('header');
                                             $id_materia = $materias[$i]['id_materia'];
                                             $query = "
                                                     SELECT
-                                                        b.nombre AS nombre_bloque
+                                                        b.nombre AS nombre_bloque,
+                                                        b.id_bloque AS id_bloque
                                                     FROM
                                                         bloque b
                                                     JOIN
                                                         materia m ON b.id_materia = m.id_materia AND m.id_materia = '{$id_materia}';
                                                 ";
-                                            $stmt = $pdo->prepare($query);
-                                            $stmt->execute();
 
-                                            // Obtener los resultados
-                                            $bloques = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                            $bloques = consultaBD($query, $pdo, true);
 
                                             // Mostrar los resultados
                                             if (!empty($materias)) {
                                                 foreach ($bloques as $bloque) { ?>
                                                     <li>
                                                         <div class="accordion-subject">
-                                                            <a href="./contenido.php">
+                                                            <a href="./contenido.php?bloque=<?php echo htmlspecialchars($bloque['id_bloque']); ?>">
                                                                 <p><?php echo htmlspecialchars($bloque['nombre_bloque']); ?></p>
                                                             </a>
                                                             <div class="form-check">
