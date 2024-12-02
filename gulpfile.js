@@ -10,8 +10,7 @@ const rename = require('gulp-rename');
 
 const paths = {
     scss: 'src/scss/**/*.scss',
-    js: 'src/js/**/*.js',
-    imagenes: 'src/img/**/*'
+    js: 'src/js/**/*.js'
 }
 
 function css() {
@@ -24,7 +23,7 @@ function css() {
 }
 
 function javascript() {
-    return src(paths.js)
+    return src(paths.js, { allowEmpty: true })
       .pipe(sourcemaps.init())
       .pipe(concat('bundle.js'))
       .pipe(terser())
