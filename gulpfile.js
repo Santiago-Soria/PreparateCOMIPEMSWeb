@@ -23,7 +23,7 @@ function css() {
 }
 
 function javascript() {
-    return src(paths.js, { allowEmpty: true })
+    return src(paths.js)
       .pipe(sourcemaps.init())
       .pipe(concat('bundle.js'))
       .pipe(terser())
