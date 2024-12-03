@@ -34,16 +34,14 @@ $auth = $_SESSION['login'] ?? false;
                         <a href="#">Mi Progrso</a>
                         <a href="#">Comunidad</a>
                         <a href="#">Soporte</a>
-                        <a href="cerrar-sesion.php">
+                        <a href="iniciar-sesion.php">
                             <img src="/build/img/logout.svg" alt="Cerrar sesión" title="Cerrar sesión">
                         </a>
                     <?php else: ?>
                         <a href="#">Guía digital</a>
                         <a href="#">Examenes Simulacro</a>
                         <a href="#">Información sobre COMIPEMS</a>
-                        <a href="iniciar-sesion.php">
-                            <img src="/build/img/login.svg" alt="Iniciar sesión" title="Iniciar sesión">
-                        </a>
+                        <a href="iniciar-sesion.php" class="active">Iniciar sesión</a>
                     <?php endif; ?>
                 </nav>
             </div> <!-- .barra -->

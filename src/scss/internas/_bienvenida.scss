@@ -1,0 +1,65 @@
+.Texto-Bienvenida{
+    font-size: 2rem;
+    font-weight: 800;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: $separacion;
+    
+    @include tablet{
+        font-size: 3rem;        
+    }
+    @include desktop{
+        font-size: 4rem;        
+    }
+}
+
+.descripcion-con-imagen{
+    display: flex;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .imagen-plataforma{
+        width: 100%;
+    }
+}
+
+.descripcion-plataforma-texto{
+    padding: 3rem;
+    p{
+        font-weight: 600;
+
+        @include desktop{
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.enlaces-bienvenida{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    a{
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 2rem;
+        border: .1rem solid $azulClaro;
+        transition: filter 0.3s ease;
+
+        &:hover{
+            filter: brightness(0.8);
+        }
+    }
+    a:first-of-type{
+        color: $blanco;
+        background-color: $azulClaro;
+    }
+
+}
