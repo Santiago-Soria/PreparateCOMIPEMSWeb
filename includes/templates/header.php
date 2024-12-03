@@ -14,6 +14,8 @@ $auth = $_SESSION['login'] ?? false;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrepárateCOMIPEMS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link rel="stylesheet" href="build/css/app.css">
     <link rel="shortcut icon" href="build/img/icono_pestana.svg">
 </head>
@@ -34,14 +36,15 @@ $auth = $_SESSION['login'] ?? false;
                         <a href="#">Mi Progrso</a>
                         <a href="#">Comunidad</a>
                         <a href="#">Soporte</a>
-                        <a href="iniciar-sesion.php">
+                        <a href="cerrar-sesion.php">
                             <img src="/build/img/logout.svg" alt="Cerrar sesión" title="Cerrar sesión">
                         </a>
-                    <?php else: ?>
+                    <?php endif;
+                    if (!$auth): ?>
                         <a href="#">Guía digital</a>
                         <a href="#">Examenes Simulacro</a>
                         <a href="#">Información sobre COMIPEMS</a>
-                        <a href="iniciar-sesion.php" class="active">Iniciar sesión</a>
+                        <a href="login.php" class="active">Iniciar sesión</a>
                     <?php endif; ?>
                 </nav>
             </div> <!-- .barra -->

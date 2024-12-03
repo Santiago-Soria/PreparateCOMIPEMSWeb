@@ -132,3 +132,6 @@ INSERT INTO Tema (nombre, contenido, id_bloque) VALUES
 ('Analogías','',2),
 ('Palabras con significado similar','',3),
 ('Palabras con significado opuesto','',4);
+
+INSERT INTO Usuario (nombre, correo, contrasena) VALUES
+('Usuario', 'usuario@gmail.com', '1234');
