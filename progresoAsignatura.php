@@ -20,7 +20,7 @@ if (!$_SESSION['login']) {
 <div class="contenedor seccion contenedor-progreso">
     <h3>!Sigue adelante y mejora tus habilidades en los temas que más lo necesitan para lograr el éxito!</h3>
     <div class="contenedor barra-progreso">
-
+    <p>80%</p>
     </div>
     <div class="contenedor contenedor-charts-progreso">
         <div class="contenedor-acordeon-progreso">

@@ -4,23 +4,41 @@
         font-weight: 800;
         font-size: 2.5rem;
     }
+
+    .barra-progreso{
+        width: 100%;
+        border-radius: 2rem;
+        border: 1rem solid $azulOscuro;
+        box-shadow: 1rem 1rem .5rem $gris;
+        @include tablet{
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        p{
+            color: $azulClaro;
+        }
+    }
 }
 
 
 
 .contenedor-charts-progreso{
-    height: 40rem;
+    padding-top: $separacion;
     display: flex;
     flex-direction: column;
     @include tablet{
+        height: 40rem;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
 
     .contenedor-acordeon-progreso {
-        height: 100%;
-        overflow-y: auto;
-        overflow-x: hidden;
+        @include tablet{
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
     }
 }
