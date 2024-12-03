@@ -13,9 +13,9 @@ incluirTemplate('header');
 ?>
 
 <main class="contenedor seccion">
-    <h1 class="titulo">Progreso Asignarura</h1>
+    <h1 class="titulo"></h1>
     <p class="descripcion">
-        En esta sección podrás consultar tu progreso detallado en cada una de las asignaturas que forman parte del examen COMIPEMS. Se presenta un desglose por temas, permitiéndote identificar las áreas en las que has avanzado y aquellas que requieren mayor enfoque. Utiliza esta herramienta para gestionar tu estudio de manera eficiente y optimizar tu rendimiento académico.
+        
     </p>
 </main>
 
