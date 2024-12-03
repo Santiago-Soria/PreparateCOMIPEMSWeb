@@ -22,11 +22,13 @@
         }
         
         .contenedor-opcion{
+            box-shadow: 1rem 1rem .5rem $gris;
             border: .35rem solid $azulClaro;
             border-radius: 3rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: inherit;
             margin-bottom: $separacion;
             padding: 3rem;
             @include tablet{

@@ -32,13 +32,9 @@ if (!$_SESSION['login']) {
                 </div>
                 <h3>Progreso por asignatura</h3>
                 <p>
-                    Accede a los primeros temas de la guía oficial COMIPEMS y descubre cómo te preparamos para el éxito.
-                    <ul>
-                        <li><strong>Temario disponible:</strong> Explora capítulos iniciales de Español y Matemáticas.</li>
-                        <li><strong>Acceso completo:</strong> Regístrate para desbloquear la guía completa.</li>
-                    </ul>
+                   En esta sección podrás visualizar tu avance general dentro de la plataforma, con un resumen claro de las actividades completadas y el porcentaje de progreso en cada asignatura.
                 </p>
-                <a href="/menuMaterias.php" class="boton">Ver temario</a>
+                <a href="/progresoAsignatura.php" class="boton">Ver progreso</a>
             </div>
         </div>
     </div>
