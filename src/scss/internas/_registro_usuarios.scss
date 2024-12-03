@@ -1,0 +1,68 @@
+.contenedor-registroUsuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .display-none{
+        display: none;
+        @include tablet{
+            display: unset;
+        }
+    }
+
+    .contenedor-formulario{
+        padding-bottom: 2rem;
+        border: 0.3rem solid $gris;
+        border-radius: 2rem;
+        box-shadow: 0 .3rem .2rem $gris;
+        @include desktop{
+            height: 60rem;
+
+        }
+
+        @include desktop{
+            width: 40%;
+        }
+
+        .formulario-registro{
+            width: 80%;
+            margin: 0 auto;
+
+            h2{
+                font-weight: 800;
+                font-size: 2rem;
+                span{
+                    color: $azulClaro;
+                }
+            }
+
+            input{
+                all: unset;
+                border: none;
+                border-bottom: .2rem solid $gris;
+                width: 100%;
+                margin-bottom: 3rem;
+
+                &:focus{
+                    border-bottom: .2rem solid $azulOscuro;
+                }
+
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+
+            .registrar{
+                display: block;
+                width: 100%;
+                padding: 1rem;
+                margin-top: $separacion;
+                background-color: $azulOscuro;
+                color: #F5F5F8;
+                border-style: none;
+                border-radius: 2rem;
+                font-weight: 700;
+                font-size: 2rem;
+            }
+        }
+    }
+}

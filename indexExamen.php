@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrepárateCOMIPEMS</title>
-   
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Estilos/estilo_bienvenida.css">
-    <link rel="stylesheet" href="estilos_examen.css">
-    <script src="script.js" defer></script>
-</head>
-
-<body>
-<header class="header">
-    <div class="logo">
-        <img src="../Recursos/logo.png" alt="Logo del Programa">
-    </div>
-    <div class="divider"></div>
-    <nav class="nav-buttons">
-        <a href="#" class="nav-button">Guía digital</a>
-        <a href="#" class="nav-button">Exámenes simulacro</a>
-        <a href="#" class="nav-button">Información sobre COMIPEMS</a>
-        <a href="../Pantallas/Iniciar_Sesion.php" class="nav-button">Iniciar sesión</a>
-    </nav>
-    
-</header>
+<?php
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
 
 <div class="d-flex">
     <!-- Menú lateral -->
@@ -289,11 +265,7 @@
     </div>
 </div>
 
-<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<script>
-
-</script>
-</body>
-
-</html>
+<?php
+incluirTemplate('footer');
+?>
 

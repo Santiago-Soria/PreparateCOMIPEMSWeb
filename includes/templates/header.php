@@ -30,8 +30,8 @@ $auth = $_SESSION['login'] ?? false;
 
                 <nav class="navegacion">
                     <?php if ($auth): ?>
-                        <a href="#">Inicio</a>
-                        <a href="#" class="active">Guía Dígital</a>
+                        <a href="/InicioLoggeado.php">Inicio</a>
+                        <a href="/menuMaterias.php">Guía Dígital</a>
                         <a href="#">Exámenes</a>
                         <a href="#">Mi Progrso</a>
                         <a href="#">Comunidad</a>
@@ -41,10 +41,10 @@ $auth = $_SESSION['login'] ?? false;
                         </a>
                     <?php endif;
                     if (!$auth): ?>
-                        <a href="#">Guía digital</a>
+                        <a href="/menuMaterias.php">Guía digital</a>
                         <a href="#">Examenes Simulacro</a>
                         <a href="#">Información sobre COMIPEMS</a>
-                        <a href="login.php" class="active">Iniciar sesión</a>
+                        <a href="login.php">Iniciar sesión</a>
                     <?php endif; ?>
                 </nav>
             </div> <!-- .barra -->

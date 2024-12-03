@@ -87,7 +87,7 @@ incluirTemplate('header');
             <button type="submit" class="Iniciar-sesion">Iniciar sesión</button>
             <div class="asistencia-login">
                 <p>¿Necesitas una cuenta de PrepárateCOMIPEMS?</p>
-                <a href="">Crear una nueva cuenta</a>
+                <a href="/Registro_Usuario.php">Crear una nueva cuenta</a>
             </div>
         </form>
     </div>

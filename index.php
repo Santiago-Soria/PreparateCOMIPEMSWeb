@@ -24,8 +24,8 @@ incluirTemplate('header');
                 </div>
 
                 <div class="enlaces-bienvenida">
-                    <a href="/login.php">Empieza a aprender</a>
-                    <a href="">Continuar como invitado</a>
+                    <a href="<?php echo (isset($_SESSION['login']))? '/menuMaterias.php':'/login.php';  ?>">Empieza a aprender</a>
+                    <a href="/invitado.php">Continuar como invitado</a>
                 </div>
             </div>
         </div>

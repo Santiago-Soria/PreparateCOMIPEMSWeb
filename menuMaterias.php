@@ -43,7 +43,7 @@ incluirTemplate('header');
                             <div class="item-header">
                                 <h2 class="accordion-header">
                                     <div class="icono" style="background-color: <?php echo htmlspecialchars($materias[$i]['color']); ?>;">
-                                        <img src="/src/img/<?php echo htmlspecialchars($materias[$i]['icono']); ?>" alt="">
+                                        <img src="/build/img/iconos/<?php echo htmlspecialchars($materias[$i]['icono']); ?>" alt="">
                                     </div>
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#<?php echo htmlspecialchars($materias[$i]['id_materia']); ?>" aria-expanded="false" aria-controls="<?php echo htmlspecialchars($materias[$i]['id_materia']); ?>">
@@ -71,10 +71,12 @@ incluirTemplate('header');
 
                                             // Mostrar los resultados
                                             if (!empty($materias)) {
-                                                foreach ($bloques as $bloque) { ?>
+                                                foreach ($bloques as $bloque) { 
+                                                    $rutaContenido = isset($_SESSION['login'])? "./contenidoGuiaDigital.php?materia=".$materias[$i]['id_materia']."&bloque=".$bloque['id_bloque'] : '#'
+                                                    ?>
                                                     <li>
                                                         <div class="accordion-subject">
-                                                            <a href="./contenido.php?materia=<?php echo htmlspecialchars($materias[$i]['id_materia'])?>&bloque=<?php echo htmlspecialchars($bloque['id_bloque']); ?>">
+                                                            <a href="<?php echo $rutaContenido ?>">
                                                                 <p><?php echo htmlspecialchars($bloque['nombre_bloque']); ?></p>
                                                             </a>
                                                             <div class="form-check">
@@ -104,7 +106,7 @@ incluirTemplate('header');
                     <div class="item-header">
                         <h2 class="accordion-header">
                             <div class="icono" style="background-color: <?php echo htmlspecialchars($materias[$i]['color']); ?>;">
-                                <img src="/src/img/<?php echo htmlspecialchars($materias[$i]['icono']); ?>" alt="">
+                                <img src="./build/img/iconos/<?php echo htmlspecialchars($materias[$i]['icono']); ?>" alt="">
                             </div>
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#<?php echo htmlspecialchars($materias[$i]['id_materia']); ?>" aria-expanded="false" aria-controls="<?php echo htmlspecialchars($materias[$i]['id_materia']); ?>">
@@ -132,10 +134,12 @@ incluirTemplate('header');
 
                                     // Mostrar los resultados
                                     if (!empty($materias)) {
-                                        foreach ($bloques as $bloque) { ?>
+                                        foreach ($bloques as $bloque) { 
+                                            $rutaContenido = isset($_SESSION['login'])? "./contenidoGuiaDigital.php?materia=".$materias[$i]['id_materia']."&bloque=".$bloque['id_bloque'] : '#'
+                                            ?>
                                             <li>
                                                 <div class="accordion-subject">
-                                                    <a href="./contenido.php?materia=<?php echo htmlspecialchars($materias[$i]['id_materia'])?>&bloque=<?php echo htmlspecialchars($bloque['id_bloque']);?>">
+                                                    <a href="<?php echo $rutaContenido?>">
                                                         <p><?php echo htmlspecialchars($bloque['nombre_bloque']); ?></p>
                                                     </a>
                                                     <div class="form-check">

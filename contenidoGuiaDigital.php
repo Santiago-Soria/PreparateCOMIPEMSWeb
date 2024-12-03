@@ -5,12 +5,15 @@ $pdo = conectarDB();
 
 require 'includes/funciones.php';
 incluirTemplate('header');
+if(!$_SESSION['login']) {
+    header('Location: /menuMaterias.php');
+}
 
 // Obtener las variables del enlace
 if (isset($_GET['bloque'])) {
     $id_bloque = htmlspecialchars($_GET['bloque']);
 } else {
-    echo "Faltan parámetros en el enlace.";
+    $id_bloque = 1;
 }
 
 try {
@@ -45,7 +48,7 @@ try {
     <section class="acordeon-contenido">
         <div class="header-contenido">
             <div class="icono" style="background-color: <?php echo htmlspecialchars($materia_bloque['color_materia']); ?>">
-                <img src="/src/img/<?php echo htmlspecialchars($materia_bloque['icono_materia']); ?>" alt="">
+                <img src="/build/img/iconos/<?php echo htmlspecialchars($materia_bloque['icono_materia']); ?>" alt="">
             </div>
             <h1 class="titulo titulo-contenido"><?php echo htmlspecialchars($materia_bloque['nombre_materia']); ?></h1>
         </div>
@@ -91,7 +94,7 @@ try {
                                 }
                                 foreach ($temas as $tema) {
                                 ?>
-                                    <li><a href="./contenido.php?materia=<?php echo $id_materia ?>&bloque=<?php echo $id_bloque ?>&tema=<?php echo htmlspecialchars($tema['id_tema']) ?>" class="enlace-tema-contenido"><?php echo htmlspecialchars($tema['nombre']); ?></a></li>
+                                    <li><a href="./contenidoGuiaDigital.php?materia=<?php echo $id_materia ?>&bloque=<?php echo $id_bloque ?>&tema=<?php echo htmlspecialchars($tema['id_tema']) ?>" class="enlace-tema-contenido"><?php echo htmlspecialchars($tema['nombre']); ?></a></li>
                                 <?php
                                 }
                                 ?>
@@ -123,7 +126,7 @@ try {
                 // echo '</pre>';
         ?>
                 <div class="ruta-contenido">
-                    <img src="./src/img/icono-guia.svg" class="icono icono-guia" alt="">
+                    <img src="./build/img/iconos/icono-guia.svg" class="icono icono-guia" alt="">
                     <p class="ruta">
                         Guía dígital &gt;
                         <?php echo htmlspecialchars($materia_bloque['nombre_materia']); ?> &gt;
@@ -135,7 +138,7 @@ try {
                     <?php
                     $contenido = $tema_contenido['contenido'];
                     if ($contenido) {
-                        $jsonData = file_get_contents("src/contenido-json/{$contenido}");
+                        $jsonData = file_get_contents("./build/contenido-json/{$contenido}");
                         $dataObject = json_decode($jsonData);
                         echo $dataObject->texto; // Muestra el contenido de "texto"
                     } else {
@@ -162,7 +165,7 @@ try {
         } else {
             ?>
             <div class="ruta-contenido">
-                <img src="./src/img/icono-guia.svg" class="icono icono-guia" alt="">
+                <img src="./build/img/iconos/icono-guia.svg" class="icono icono-guia" alt="">
                 <p class="ruta">
                     Guía dígital &gt;
                     <?php echo htmlspecialchars($materia_bloque['nombre_materia']); ?> &gt;
@@ -171,7 +174,7 @@ try {
             </div>
             <h2 class="titulo" style="width:100%; text-align: center;">¡Selecciona un tema para comenzar!</h2>
             <div style="display: flex; align-items: center; justify-content: center; height: 80%;">
-                <img src="./src/img/logo.png" alt="" style="width: 80%;">
+                <img src="./build/img/logo.png" alt="" style="width: 80%;">
             </div>
         <?php
         }
