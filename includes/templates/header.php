@@ -24,7 +24,7 @@ $auth = $_SESSION['login'] ?? false;
     <header class="header">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="/">
+                <a href="<?php echo $auth? '/InicioLoggeado.php' : '/' ?>">
                     <img src="build/img/logo.png" alt="Logotipo de PrepárateCOMIPEMS" class="logo">
                 </a>
 
@@ -34,7 +34,7 @@ $auth = $_SESSION['login'] ?? false;
                         <a href="/menuMaterias.php">Guía Dígital</a>
                         <a href="#">Exámenes</a>
                         <a href="/progreso.php">Mi Progreso</a>
-                        <a href="#">Comunidad</a>
+                        <a href="/comunidad.php">Comunidad</a>
                         <a href="#">Soporte</a>
                         <a href="cerrar-sesion.php">
                             <img src="/build/img/logout.svg" alt="Cerrar sesión" title="Cerrar sesión">
