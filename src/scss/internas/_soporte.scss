@@ -1,13 +1,100 @@
-.contenedor-soporte{
+.contenedor-soporte {
     width: 100%;
     max-width: 100%;
     margin: 0;
     background-color: $azulClaro;
     padding: 3rem 8rem;
-    .titulo-soporte{
+
+    .titulo-soporte {
         color: $blanco;
         margin: 0;
         font-weight: 800;
         font-size: 5rem;
+    }
+
+    .navbar {
+        margin-top: 3rem;
+
+        .container-fluid {
+            background-color: $blanco;
+
+            .d-flex {
+                width: 100%;
+
+                .btn {
+                    border: none;
+
+                    &:hover {
+                        background-color: $gris;
+                    }
+                }
+
+                input {
+                    font-size: 3rem;
+                    color: $gris;
+                }
+            }
+        }
+    }
+
+    .contenedor-apartados {
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
+            gap: $separacion;
+        }
+        .apartado {
+            max-width: 30rem;
+            .titulo-apartado{
+                font-weight: 100;
+                border-bottom: .5rem solid $blanco;
+            }
+            .pregunta{
+                font-weight: 700;
+            }
+            p {
+                color: $blanco;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.contenedor-FAQ{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: start;
+    justify-content: space-between;
+    @include tablet{
+        flex-direction: row;
+    }
+    .faq{
+        border-radius: 2rem;
+        border: .35rem solid $azulClaro;
+        box-shadow: 1rem 1rem .5rem $gris;
+        width: 100%;
+        @include tablet{
+            height: 60rem;
+        }
+        @include desktop{
+            height: 40rem;
+        }
+        .faq-header{
+            color: $azulClaro;
+            font-weight: 700;
+        }
+        ul{
+            list-style: none;
+            padding: 1rem;
+            li{
+                font-weight: 800;
+            }
+        }
     }
 }
