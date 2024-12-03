@@ -9,7 +9,7 @@
                 <a href="#">Exámenes</a>
                 <a href="/progreso.php">Mi Progreso</a>
                 <a href="/comunidad.php">Comunidad</a>
-                <a href="#">Soporte</a>
+                <a href="/soporte.php">Soporte</a>
                 <a href="cerrar-sesion.php">
                     <img src="/build/img/logout.svg" alt="Cerrar sesión" title="Cerrar sesión">
                 </a>
