@@ -1,7 +1,26 @@
-.contenedor-progreso{
-    h3{
+.contenedor-progreso {
+    h3 {
         color: $azulOscuro;
         font-weight: 800;
         font-size: 2.5rem;
+    }
+}
+
+
+
+.contenedor-charts-progreso{
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .contenedor-acordeon-progreso {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 }
