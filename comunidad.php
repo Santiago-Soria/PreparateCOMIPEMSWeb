@@ -12,11 +12,26 @@ if (!$_SESSION['login']) {
 }
 ?>
 
-<main class="contenedor seccion">
-    <h1 class="titulo">Progreso Asignarura</h1>
-    <p class="descripcion">
-        En esta sección podrás consultar tu progreso detallado en cada una de las asignaturas que forman parte del examen COMIPEMS. Se presenta un desglose por temas, permitiéndote identificar las áreas en las que has avanzado y aquellas que requieren mayor enfoque. Utiliza esta herramienta para gestionar tu estudio de manera eficiente y optimizar tu rendimiento académico.
-    </p>
+<main class="contenedor seccion contenedor-comunidad">
+    <div class="contenedor-descripcion">
+        <h1 class="titulo">Únete a nuestra comunidad</h1>
+        <p class="descripcion">
+            Interactúa con otros estudiantes que, como tú, están preparándose para el exámen. Comparte tu experiencia, resuelve dudas y encuentra apoyo en nuestra comunidad.
+            <br><br>
+            <strong>¿Qué necesitas para unirte?</strong>
+        </p>
+            <ol>
+                <li>Crea tu cuenta de Discord para poder entrar a la comunidad.</li>
+                <li>Ingresa por medio del siguiente botón:</li>
+            </ol>
+            <a href="#" class="boton">Ir a la comunidad</a>
+    </div>
+    <div class="contenedor-imagenes">
+        <div class="contenedor-imagen">
+            <img src="/build/img/comunidad.png" alt="">
+            <img src="/build/img/comunidadDiscord.png" alt="">
+        </div>
+    </div>
 </main>
 
 <div class="contenedor seccion">

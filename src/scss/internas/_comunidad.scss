@@ -1,0 +1,37 @@
+.contenedor-comunidad{
+    display: flex;
+    flex-direction: column;
+    gap: $separacion;
+    @include tablet{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contenedor-descripcion{
+        align-self: flex-start;
+    }
+    .boton{
+        background-color: $azulClaro;
+        color: $blanco;
+        border-radius: 1rem;
+        text-align: center;
+        padding: .5rem 5rem;
+        display: block;
+        width: max-content;
+        margin: 2rem auto;
+    }
+    
+    .contenedor-imagen{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $separacion;
+        img{
+            width: 20rem;
+            margin: 0 auto;
+            &:last-of-type{
+                width: 100%;
+            }
+        }
+    }
+}
