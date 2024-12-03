@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['login'] = true;
 
 
-                header('Location: contenidoGuiaDigital.php?materia=1&bloque=1');
+                header('Location: /InicioLoggeado.php');
             } else {
                 $errores[] = 'El password es incorrecto';
             }

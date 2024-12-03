@@ -44,7 +44,7 @@ $auth = $_SESSION['login'] ?? false;
                         <a href="/menuMaterias.php">Guía digital</a>
                         <a href="#">Examenes Simulacro</a>
                         <a href="#">Información sobre COMIPEMS</a>
-                        <a href="login.php">Iniciar sesión</a>
+                        <a href="login.php" class="active">Iniciar sesión</a>
                     <?php endif; ?>
                 </nav>
             </div> <!-- .barra -->
