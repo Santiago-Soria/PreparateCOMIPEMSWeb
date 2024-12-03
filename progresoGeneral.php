@@ -16,14 +16,16 @@ if (!$_SESSION['login']) {
 <div class="contenedor seccion contenedor-progreso">
     <h3>!Sigue adelante y mejora tus habilidades en los temas que más lo necesitan para lograr el éxito!</h3>
     <div class="contenedor barra-progreso">
-
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 80%">80%</div>
+        </div>
     </div>
     <div class="contenedor contenedor-charts-progreso">
         <div class="chart-progreso">
 
         </div>
         <div class="chart-progreso">
-            
+
         </div>
     </div>
 </div>

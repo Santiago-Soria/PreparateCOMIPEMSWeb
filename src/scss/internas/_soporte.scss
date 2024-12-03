@@ -1,0 +1,13 @@
+.contenedor-soporte{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background-color: $azulClaro;
+    padding: 3rem 8rem;
+    .titulo-soporte{
+        color: $blanco;
+        margin: 0;
+        font-weight: 800;
+        font-size: 5rem;
+    }
+}

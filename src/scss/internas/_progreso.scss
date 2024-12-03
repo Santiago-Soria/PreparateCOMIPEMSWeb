@@ -10,13 +10,18 @@
         border-radius: 2rem;
         border: 1rem solid $azulOscuro;
         box-shadow: 1rem 1rem .5rem $gris;
+        padding: .5rem 2rem;
         @include tablet{
             width: 60%;
             margin: 0 auto;
         }
 
-        p{
-            color: $azulClaro;
+        .progress{
+            height: 3rem;
+            border-radius: 3rem;
+            font-size: 2rem;
+            font-weight: 700;
+            --bs-progress-bar-bg: #237BBB;
         }
     }
 }

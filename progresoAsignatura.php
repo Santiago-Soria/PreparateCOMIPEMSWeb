@@ -11,7 +11,7 @@ if (!$_SESSION['login']) {
 ?>
 
 <main class="contenedor seccion">
-    <h1 class="titulo">Progreso Asignarura</h1>
+    <h1 class="titulo">Progreso Asignatura</h1>
     <p class="descripcion">
         En esta sección podrás consultar tu progreso detallado en cada una de las asignaturas que forman parte del examen COMIPEMS. Se presenta un desglose por temas, permitiéndote identificar las áreas en las que has avanzado y aquellas que requieren mayor enfoque. Utiliza esta herramienta para gestionar tu estudio de manera eficiente y optimizar tu rendimiento académico.
     </p>
@@ -20,7 +20,9 @@ if (!$_SESSION['login']) {
 <div class="contenedor seccion contenedor-progreso">
     <h3>!Sigue adelante y mejora tus habilidades en los temas que más lo necesitan para lograr el éxito!</h3>
     <div class="contenedor barra-progreso">
-    <p>80%</p>
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 80%">80%</div>
+        </div>
     </div>
     <div class="contenedor contenedor-charts-progreso">
         <div class="contenedor-acordeon-progreso">
