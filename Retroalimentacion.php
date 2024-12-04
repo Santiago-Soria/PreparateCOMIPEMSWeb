@@ -11,7 +11,8 @@ incluirTemplate('header');
         <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link active" href="#" onclick="mostrarResumenGeneral()">Resumen general</a></li>
             <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarResultadosPorAsignatura()">Resultados por asignatura</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Sugerencias de mejora</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSugerenciasPorMateria()">Sugerencias de mejora</a></li>
+
         </ul>
         <button class="btn btn-danger mt-3 w-100" onclick="reiniciarExamen()">Reiniciar examen</button>
     </nav>
@@ -52,9 +53,11 @@ incluirTemplate('header');
     </div>
 </div>
 
+<script src="script2.js"></script>
+
 <script>
     function reiniciarExamen() {
-        window.location.href = 'index.html';
+        window.location.href = 'indexExamen.php';
     }
 </script>
 <?php

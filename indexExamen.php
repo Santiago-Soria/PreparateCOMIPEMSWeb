@@ -261,9 +261,13 @@ incluirTemplate('header');
             <button id="btn-anterior" class="btn btn-secondary" style="display: none;">Anterior</button>
             <button id="btn-siguiente" class="btn btn-primary">Siguiente</button>
 
+            <script src="script2.js"></script>
+
         </div>
     </div>
 </div>
+
+
 
 <?php
 incluirTemplate('footer');

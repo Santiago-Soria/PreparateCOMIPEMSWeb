@@ -1,0 +1,66 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+}
+
+/* Menú lateral */
+.menu-lateral {
+    width: 250px;
+    background-color: #f3f3f3;
+    padding: 20px;
+}
+
+.materia {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.preguntas {
+    display: none;
+    margin-left: 10px;
+}
+
+.pregunta {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Estado contestada */
+.pregunta.contestada {
+    background-color: #004c84;
+    color: white;
+}
+
+/* Contenido del examen */
+.contenido-examen {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#cronometro {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.opciones button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+}
