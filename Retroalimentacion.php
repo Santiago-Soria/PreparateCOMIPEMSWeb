@@ -50,6 +50,20 @@ incluirTemplate('header');
                 <tbody id="tabla-resultados"></tbody>
             </table>
         </div>
+
+        <div id="sugerencias-mejora" class="seccion" style="display: none;">
+
+<h3 class="text-center text-primary">Sugerencias de Mejora</h3>
+
+<div id="contenido-sugerencias">
+
+    <!-- Aquí se insertan dinámicamente las sugerencias -->
+
+</div>
+
+</div>
+
+
     </div>
 </div>
 
