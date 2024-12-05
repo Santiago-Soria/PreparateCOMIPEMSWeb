@@ -1,6 +1,6 @@
 .header{
     padding: 1rem 0 3rem 0;
-    background-color: $blanco;
+    background-color: blue !important;
     box-shadow: 0 0 1rem $gris;
     @include tablet{
         position: sticky;

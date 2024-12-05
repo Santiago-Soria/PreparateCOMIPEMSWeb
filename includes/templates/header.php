@@ -24,7 +24,7 @@ $auth = $_SESSION['login'] ?? false;
     <header class="header">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="<?php echo $auth? '/InicioLoggeado.php' : '/' ?>">
+                <a href="<?php echo $auth? '/InicioLoggeado.php' : 'index.php' ?>">
                     <img src="build/img/logo.png" alt="Logotipo de PrepárateCOMIPEMS" class="logo">
                 </a>
 
