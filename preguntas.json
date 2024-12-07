@@ -1,15 +1,6 @@
 {
     "RazonamientoVerbal": [
       {
-        "pregunta": "Lee el siguiente enunciado: \n\n Un pequeño esfuerzo del pescador le ''reditúa'' una ganancia económica muy alta. \n\n De acuerdo con el contexto, la palabra subrayada significa",
-        "opciones": [{"texto": "producir."},
-                     {"texto": "repercutir."},
-                     {"texto": "representar."},
-                     {"texto": "reflejar."}
-        ],
-        "correcta": "A"
-      },
-      {
         "pregunta": "MÚSICO es a INSTRUMENTO como",
         "opciones": [{"texto": "poeta a poesía"},
                      {"texto": "mecánico a herramienta."},
@@ -44,6 +35,15 @@
                      {"texto": "Despreciable."}
         ],
         "correcta": "A"
+      },
+      {
+      "pregunta": "Lee el siguiente enunciado: \n\n Un pequeño esfuerzo del pescador le ''reditúa'' una ganancia económica muy alta. \n\n De acuerdo con el contexto, la palabra subrayada significa",
+        "opciones": [{"texto": "producir."},
+                     {"texto": "repercutir."},
+                     {"texto": "representar."},
+                     {"texto": "reflejar."}
+        ],
+        "correcta": "A"
       }
     ],
 
@@ -74,18 +74,18 @@
                    {"texto": "-36"}
       ],
       "correcta": "A",
-      "imagen": "imagenes/sucesion3.png"
+      "imagen": "../build/img/examenes/sucesion3.png"
       },
       {
         "pregunta": "Si se permite cualquier tipo de giro, ¿con cúal figura se completa un cuadrado?",
         "opciones": [
-        {"imagen": "imagenes/sucesion4a.png"},
-        {"imagen": "imagenes/sucesion4b.png"},
-        {"imagen": "imagenes/sucesion4c.png"},
-        {"imagen": "imagenes/sucesion4d.png"}
+        {"imagen": "../build/img/examenes/sucesion4a.png"},
+        {"imagen": "../build/img/examenes/sucesion4b.png"},
+        {"imagen": "../build/img/examenes/sucesion4c.png"},
+        {"imagen": "../build/img/examenes/sucesion4d.png"}
       ],
         "correcta": "A",
-        "imagen": "imagenes/sucesion4.png"
+        "imagen": "../build/img/examenes/sucesion4.png"
       },
       {
         "pregunta": "¿Cuál es el número que falta?",
@@ -94,7 +94,7 @@
                      {"texto": "15"},
                      {"texto": "16"}],
         "correcta": "C",
-        "imagen": "imagenes/sucesion5.png"
+        "imagen": "../build/img/examenes/sucesion5.png"
       }
     ],
 
@@ -117,7 +117,7 @@
                      {"texto": "Ejemplos."}
         ],
         "correcta": "B",
-        "imagen": "imagenes/español2.png"
+        "imagen": "../build/img/examenes/español2.png"
       },
       {
         "pregunta": "Los nexos luego,después, primero, antes, hacen referencia a",
@@ -136,7 +136,7 @@
                      {"texto": "Señalar el tiempo en el párrafo."}
         ],
         "correcta": "C",
-        "imagen": "imagenes/español4.png"
+        "imagen": "../build/img/examenes/español4.png"
       },
       {
         "pregunta": "Lee el siguiente texto y elige cuál es el propósito del texto anterior.",
@@ -146,12 +146,12 @@
                      {"texto": "Analizar la evolución literaria de Dan Brown."}
         ],
         "correcta": "C",
-        "imagen": "imagenes/español5.png"
+        "imagen": "../build/img/examenes/español5.png"
       }
     ],
 
 
-    "matematicas": [
+    "Matematicas": [
       {
         "pregunta": "120 es el 75% de",
         "opciones": [{"texto": "200"},
@@ -178,7 +178,7 @@
                      {"texto": "12"}
         ],
         "correcta": "B",
-        "imagen": "imagenes/mate3.png"
+        "imagen": "../build/img/examenes/mate3.png"
       },
       {
         "pregunta": "Las estaturas de los integrantes de un equipo de fútbol fueron:\n\n 1.82 m, 1.78 m, 1.74 m, 1.76 m, 1.76 m, 1.81 m, 1.77 m, 1.68 m, 1.74 m, 1.69 m y 1.65 m \n\n ¿Cuál fue la mediana de las estaturas ordenadas? ",
@@ -197,7 +197,7 @@
                      {"texto": "36 metros cuadrados"}
         ],
         "correcta": "D",
-        "imagen": "imagenes/mate5.png"
+        "imagen": "../build/img/examenes/mate5.png"
       }
     ],
 
@@ -358,7 +358,7 @@
                      {"texto": "lV."}
         ],
         "correcta": "B",
-        "imagen": "imagenes/historia1.png"
+        "imagen": "../build/img/examenes/historia1.png"
       },
       {
         "pregunta": "La guerra de los siete años en el siglo XVlll entre Francia e Inglaterra se considera como causa externa de la independencia",

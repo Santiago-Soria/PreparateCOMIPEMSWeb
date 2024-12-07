@@ -3,10 +3,10 @@ require 'includes/funciones.php';
 incluirTemplate('header');
 ?>
 
-<div class="d-flex">
+<div class="d-flex2">
     <!-- Menú lateral -->
-    <nav class="col-3 bg-light p-3 vh-100" id="sidebar">
-        <h5 class="text-primary text-center">Sección de materias.</h5>
+    <nav class="menu-lateral" id="sidebar">
+       
         <div class="accordion" id="materiasAccordion">
             <!-- Reemplaza "Materia X" con los nombres de las materias -->
             <div class="accordion-item">
@@ -85,11 +85,11 @@ incluirTemplate('header');
                     <div class="accordion-body">
                         <!-- Botones de preguntas -->
                         <div class="d-flex flex-wrap gap-2">
-                            <button class="btn btn-primary btn-sm" data-materia="matematicas" data-pregunta="1">1</button>
-                            <button class="btn btn-primary btn-sm" data-materia="matematicas" data-pregunta="2">2</button>
-                            <button class="btn btn-primary btn-sm" data-materia="matematicas" data-pregunta="3">3</button>
-                            <button class="btn btn-primary btn-sm" data-materia="matematicas" data-pregunta="4">4</button>
-                            <button class="btn btn-primary btn-sm" data-materia="matematicas" data-pregunta="5">5</button>
+                            <button class="btn btn-primary btn-sm" data-materia="Matematicas" data-pregunta="1">1</button>
+                            <button class="btn btn-primary btn-sm" data-materia="Matematicas" data-pregunta="2">2</button>
+                            <button class="btn btn-primary btn-sm" data-materia="Matematicas" data-pregunta="3">3</button>
+                            <button class="btn btn-primary btn-sm" data-materia="Matematicas" data-pregunta="4">4</button>
+                            <button class="btn btn-primary btn-sm" data-materia="Matematicas" data-pregunta="5">5</button>
 
                             <!-- Agrega más botones según sea necesario -->
                         </div>
@@ -234,7 +234,7 @@ incluirTemplate('header');
     </nav>
 
     <!-- Contenedor principal -->
-    <div class="col-9 p-4" id="contenedor-examen">
+    <div class="contenido-examen" id="contenedor-examen">
 
         <div class="d-flex justify-content-between align-items-center mb-3">
             <span id="indice" class="fw-bold text-primary" style="font-size: 1rem;">
@@ -245,7 +245,7 @@ incluirTemplate('header');
             </span>
         </div>
 
-        <div class="border rounded p-3 mb-3" id="pregunta-contenedor">
+        <div class="contenedor-examen" id="pregunta-contenedor">
             Aquí aparecerán las preguntas.
         </div>
         <div class="border rounded p-3" id="respuesta-contenedor">

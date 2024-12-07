@@ -38,9 +38,22 @@
 
 /* Contenido del examen */
 .contenido-examen {
-    flex-grow: 1;
-    padding: 20px;
+    background-color: #EDF3FE;
+    box-shadow: 0 0.5rem 1rem $gris;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 20px auto; /* Centrar el contenedor horizontalmente con margen arriba y abajo */
+    border-radius: 10px; /* Bordes redondeados */
+    min-width: 1200px; /* Limita el ancho máximo */
+    min-height: 500px; /* Altura mínima para mantener el diseño */
+    padding: 20px; /* Espaciado interno para el contenido */
+    display: flex;
+    flex-direction: column;
+
+    /* Para garantizar el espacio inicial */
+    justify-content: flex-start; /* Alinear preguntas al inicio */
 }
+
 
 #cronometro {
     font-size: 18px;
@@ -54,3 +67,25 @@
     padding: 10px;
     font-size: 18px;
 }
+
+.d-flex2 {
+    display: flex; /* Alinear el menú y el contenido horizontalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    
+}
+
+.imagen-pregunta {
+    max-width: 20%; // Escala la imagen para que quepa en el contenedor
+    height: auto;
+    display: block; // Asegura que la imagen se muestre correctamente
+    margin: 10px auto; // Centra la imagen
+}
+
+.imagen-opcion {
+    max-width: 100%;
+    height: auto;
+    display: inline-block; // Asegura que las imágenes en opciones se muestren
+    margin-right: 10px; // Espaciado entre las opciones
+}
+
+

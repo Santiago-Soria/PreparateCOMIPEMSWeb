@@ -8,7 +8,7 @@ const respuestasCorrectas = {
     "RazonamientoVerbal": ["A", "B", "C", "D", "A"],
     "RazonamientoMatematico": ["A", "C", "A", "A", "C"],
     "Español": ["A", "B", "A", "C", "C"],
-    "matematicas": ["C", "B", "B", "B", "D"],
+    "Matematicas": ["C", "B", "B", "B", "D"],
     "Biologia": ["A", "A", "C", "B", "A"],
     "Fisica": ["A", "D", "A", "C", "C"],
     "Quimica": ["A", "A", "C", "D", "A"],
@@ -87,6 +87,8 @@ function cargarPregunta(materia, pregunta) {
     // Mostrar u ocultar el botón "Anterior"
     const indiceMateria = Object.keys(datos).indexOf(materia);
     document.getElementById("btn-anterior").style.display = pregunta > 1 || indiceMateria > 0 ? "block" : "none";
+
+
 }
 
 // Guardar respuesta seleccionada
@@ -171,6 +173,7 @@ function mostrarResultadosRetroalimentacion() {
         document.getElementById("detalle-resultado").textContent = "No hay resultados disponibles.";
         document.getElementById("porcentaje-aciertos").textContent = "Porcentaje de aciertos: -";
         document.getElementById("calificacion-aciertos").textContent = "Calificación: -";
+        document.getElementById("mensaje-motivacional").textContent = ""; // Limpia mensaje
         return;
     }
 
@@ -181,6 +184,7 @@ function mostrarResultadosRetroalimentacion() {
         document.getElementById("detalle-resultado").textContent = "No hay resultados disponibles.";
         document.getElementById("porcentaje-aciertos").textContent = "Porcentaje de aciertos: -";
         document.getElementById("calificacion-aciertos").textContent = "Calificación: -";
+        document.getElementById("mensaje-motivacional").textContent = ""; // Limpia mensaje
         return;
     }
 
@@ -189,18 +193,23 @@ function mostrarResultadosRetroalimentacion() {
 
     // Determinar calificación
     let calificacion;
+    let mensajeMotivacional;
     if (porcentaje >= 80) {
         calificacion = "Excelente";
+        mensajeMotivacional = "¡Muy bien hecho! Pero recuerda no confiarte. Vas por el camino correcto. 😊";
     } else if (porcentaje >= 50) {
         calificacion = "Bueno";
+        mensajeMotivacional = "¡Buen trabajo! Sigue esforzándote para alcanzar la excelencia. 💪";
     } else {
         calificacion = "Malo";
+        mensajeMotivacional = "No te desanimes, sigue practicando y mejorarás. Confiamos en ti. 🙏";
     }
 
-    // Actualizar el DOM con los resultados
+    // Mostrar resultados
     document.getElementById("detalle-resultado").textContent = `Puntaje total: ${aciertos}/${total}`;
     document.getElementById("porcentaje-aciertos").textContent = `Porcentaje de aciertos: ${porcentaje}%`;
     document.getElementById("calificacion-aciertos").textContent = `Calificación: ${calificacion}`;
+    document.getElementById("mensaje-motivacional").textContent = mensajeMotivacional;
 }
 
 
@@ -349,11 +358,11 @@ function mostrarSugerenciasPorMateria() {
 
     const resultados = JSON.parse(localStorage.getItem("resultadoExamenPorMateria")) || {};
     const sugerenciasPorMateria = {
-        "RazonamientoVerbal": ["Mejora la comprensión lectora", "Práctica con sinónimos y antónimos"],
-        "RazonamientoMatematico": ["Revisar álgebra básica", "Estudiar resolución de problemas"],
-        "Español": ["Estudia ortografía y redacción", "Repasa las reglas gramaticales"],
-        "matematicas": ["Practica ecuaciones y geometría", "Refuerza cálculos básicos"],
-        "Biologia": ["Estudia procesos celulares", "Revisa el sistema humano"],
+        "RazonamientoVerbal": ["Mejora la comprensión lectora.", "Práctica con sinónimos y antónimos.", "Conocimiento de antónimos y capacidad de identificar significados opuestos.","Comprensión de sinónimos en un contexto específico para determinar el significado de una palabra.","Deducción del significado de una palabra basada en el contexto dentro de un pasaje."],
+        "RazonamientoMatematico": ["Identificación de patrones en una secuencia numérica.", "Reconocimiento de patrones numéricos y cálculo de los términos faltantes en una sucesión.", "Razonamiento espacial y habilidades para completar figuras geométricas mediante rotación."],
+        "Español": ["Comprensión del uso y propósito de las fichas bibliográficas en la organización y citación de fuentes.", "Identificación de técnicas de desarrollo de ideas en textos, como explicaciones, repeticiones, paráfrasis y ejemplos.", "Comprensión del uso de nexos temporales para estructurar secuencias cronológicas en un texto.", "Análisis de la función de palabras específicas en un texto para dar orden y estructura a las ideas."],
+        "Matematicas": ["Cálculo de porcentajes y su aplicación.", "Interpretación de tablas y análisis de datos estadísticos.", "Cálculo del área de figuras geométricas, específicamente paralelogramos."],
+        "Biologia": ["Teoría de la selección natural de Darwin y adaptación al medio ambiente.", "Importancia de la conservación de la biodiversidad y regulación de recursos naturales.","Proceso de fotosíntesis en plantas.","Procesos de mitosis y crecimiento celular en organismos pluricelulares.","Cromosomas y su papel en la transmisión de la información genética."],
         "Fisica": ["Repasa leyes de Newton", "Practica problemas de movimiento"],
         "Quimica": ["Revisar tabla periódica", "Estudiar reacciones químicas básicas"],
         "Historia": ["Repasar independencia y revolución", "Estudia contexto histórico global"],
@@ -368,7 +377,7 @@ function mostrarSugerenciasPorMateria() {
     if (!listaSugerencias) {
         const contenedorSugerencias = document.getElementById("sugerencias-mejora");
         contenedorSugerencias.innerHTML = `
-            <h3 class="text-center text-primary">Sugerencias de Mejora</h3>
+            <h3 class="titulo">Sugerencias de Mejora</h3>
             <ul id="lista-sugerencias"></ul>
         `;
     }
@@ -383,7 +392,8 @@ function mostrarSugerenciasPorMateria() {
         if (porcentaje < 80) {
             const sugerencias = sugerenciasPorMateria[materia] || ["Estudia más temas en esta materia."];
             const item = document.createElement("li");
-            item.innerHTML = `<strong>${materia} (${porcentaje}%):</strong> ${sugerencias.join(", ")}`;
+            item.innerHTML = `<strong>${materia} (${porcentaje}%):</strong><br>` +
+                sugerencias.map(s => `&nbsp;&nbsp;&nbsp;&nbsp;• ${s}`).join("<br>");
             listaSugerenciasActualizada.appendChild(item);
         }
     }
@@ -392,6 +402,8 @@ function mostrarSugerenciasPorMateria() {
         listaSugerenciasActualizada.innerHTML = "<li>¡Felicidades! No tienes áreas de mejora específicas.</li>";
     }
 }
+
+
 
 
 

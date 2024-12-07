@@ -32,7 +32,7 @@ $auth = $_SESSION['login'] ?? false;
                     <?php if ($auth): ?>
                         <a href="/InicioLoggeado.php">Inicio</a>
                         <a href="/menuMaterias.php">Guía Dígital</a>
-                        <a href="#">Exámenes</a>
+                        <a href="/Examenes_simulacro.php">Exámenes</a>
                         <a href="/progreso.php">Mi Progreso</a>
                         <a href="/comunidad.php">Comunidad</a>
                         <a href="/soporte.php">Soporte</a>
