@@ -89,3 +89,57 @@
 }
 
 
+
+/* Estilos para los cuadros de los exámenes simulacro */
+.Rectangle-50 {
+    width: 613px;
+    height: 78px;
+    flex-grow: 0;
+    margin: 0 0 10px;
+    padding: 0 11px 0 18px;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos para la imagen al lado del texto */
+  .letra-2 {
+    width: 61px;
+    height: 64px;
+    flex-grow: 0;
+    margin: 25px 12px 10px 0;
+  }
+  
+  /* Estilos para el texto del examen simulacro */
+  .Examen-simulacro-1 {
+    width: 296px;
+    height: 70px;
+    flex-grow: 0;
+    margin: 50px 34px 0 12px;
+    font-family: Outfit, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: normal;
+    text-align: left;
+    color: #004c84;
+  }
+  
+  /* Estilos para el botón de iniciar */
+  .Iniciar {
+    width: 181px;
+    height: 50px;
+    flex-grow: 0;
+    margin: 14px 0 14px 34px;
+    font-family: Outfit, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #004c84;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
