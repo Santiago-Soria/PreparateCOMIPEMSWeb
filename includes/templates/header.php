@@ -42,8 +42,8 @@ $auth = $_SESSION['login'] ?? false;
                     <?php endif;
                     if (!$auth): ?>
                         <a href="/menuMaterias.php">Guía digital</a>
-                        <a href="#">Examenes Simulacro</a>
-                        <a href="#">Información sobre COMIPEMS</a>
+                        <a href="Examenes_simulacro.php">Examenes Simulacro</a>
+                        <a href="https://guias2024.comipems.org.mx/">Información sobre COMIPEMS</a>
                         <a href="login.php" class="active">Iniciar sesión</a>
                     <?php endif; ?>
                 </nav>

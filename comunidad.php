@@ -24,7 +24,7 @@ if (!$_SESSION['login']) {
                 <li>Crea tu cuenta de Discord para poder entrar a la comunidad.</li>
                 <li>Ingresa por medio del siguiente botón:</li>
             </ol>
-            <a href="#" class="boton">Ir a la comunidad</a>
+            <a href="https://discord.gg/sjRS9BHQ4v" class="boton">Ir a la comunidad</a>
     </div>
     <div class="contenedor-imagenes">
         <div class="contenedor-imagen">
